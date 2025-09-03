@@ -43,7 +43,7 @@ Use various AI services to perform custom actions such as smart summaries, trans
 One of SmartRSS's standout features is its extensive platform support. The app seamlessly integrates with:
 
 [//]: # (![Add Feed Interface]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7335.jpeg&#41;)
-<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7335.jpeg" alt="Add Feed Interface
+<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7335.jpeg" alt="Add Feed Interface"
 style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 
@@ -75,12 +75,12 @@ The app provides a clean, distraction-free reading experience with:
 
 [//]: # (![Feeds Hub]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7339.jpeg&#41;)
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7339.jpeg" alt="Feeds Hub"
-style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+style="max-width: 300px; height: auto; display: inline; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 
 [//]: # (![Reading Interface]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7337.jpeg&#41;)
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7337.jpeg" alt="Reading Interface"
-style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+style="max-width: 300px; height: auto; display: inline; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
 
 - **Clean Article Layout** - Focus on content without distractions
