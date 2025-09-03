@@ -10,7 +10,7 @@ I'd love to hear from you! Whether you want to collaborate on a project, discuss
 
 - **GitHub**: [@VinsonGuo](https://github.com/VinsonGuo) - Check out my projects and feel free to open issues or contribute
 - **Twitter**: [@vinson_guo](https://twitter.com/vinson_guo) - Follow me for updates on mobile development and tech
-- **Email**: Feel free to send me a message
+- **Email**: [guoziwei93@gmail.com](mailto:guoziwei93@gmail.com) - Feel free to send me a message
 
 ### What I'm Interested In
 
