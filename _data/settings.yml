@@ -1,33 +1,30 @@
 # Change 'comments' to true for Disqus comments
 disqus:
-  comments: true
-  disqus_shortname: 'apham'
+  comments: false
+  disqus_shortname: 'https-lenpaul-github-io-lagrange'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
-google-ID: 'UA-91332049-1'
+google-ID: ''
 
-menu: 
-  - name: Featured Projects
-    submenu:
-      - name: MicroBam
-        link: /projects/microbam
-      - name: OurLegacy
-        link: /projects/ourlegacy
-  - name: Posts
-    link: /
-  - name: Tags
-    link: /tags
-  - name: About
-    link: /about
-  - name: Follow me
-    submenu:
-      - name: GitHub
-        icon: github
-        link: http://github.com/alainpham
-      - name: LinkedIn
-        icon: linkedin-square
-        link: http://www.linkedin.com/in/alainpham
-      - name: Twitter
-        icon: twitter
-        link: https://twitter.com/koint
-    
+menu:
+- {name: 'About',   url: 'about.html'}
+- {name: 'Writing', url: 'writing.html'}
+- {name: 'Contact', url: 'contact.html'}
+
+# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+social:
+- {icon: 'github',     link: 'https://www.github.com/VinsonGuo'}
+- {icon: 'twitter',    link: 'https://twitter.com/vinson_guo'}
+- {icon: 'rss-square', link: '/feed.xml'}
+# - {icon: 'rss-square', link: '/rss-feed.xml'}
+
+# Customize site text
+pagination:
+  next_page: 'Newer'
+  previous_page: 'Older'
+
+sharing_button_prompt: 'Feel free to share!'
+
+related_posts: 'You may also enjoy:'
+
+post_date_prefix: 'Written on'
