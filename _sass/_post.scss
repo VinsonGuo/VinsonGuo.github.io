@@ -29,3 +29,72 @@
 .related-posts a {
   text-decoration: none;
 }
+
+
+/*
+  App Download Buttons
+*/
+
+.app-download-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px 0;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.app-download-section h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  min-width: 180px;
+}
+
+.download-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: white !important;
+}
+
+.download-btn .btn-icon {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .download-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}

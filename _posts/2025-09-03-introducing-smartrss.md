@@ -3,15 +3,27 @@ layout: post
 title: "Introducing SmartRSS: The AI-Powered RSS Reader That Transforms How You Consume Content"
 author: "Vinson Guo"
 categories: [apps, rss, mobile-development]
+image: assets/img/smartrss/smartrss-logo.PNG
 sticky: true
 ---
 
 In today's information-rich world, staying updated with your favorite blogs, news sites, and content creators can be overwhelming. That's why I'm excited to introduce **SmartRSS** - an AI-powered RSS reader that revolutionizes how you discover, organize, and consume content across all your devices.
 
-![SmartRSS Logo]({{ site.github.url }}/assets/img/smartrss/smartrss-logo.PNG)
 
-- **📱 iOS**: Available on the [App Store](https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900)
-- **🤖 Android**: Download from [Google Play](https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader)
+<div class="app-download-section">
+  <h3>📱 Download SmartRSS Now</h3>
+  <p>Available on both iOS and Android platforms</p>
+  <div class="download-buttons">
+    <a href="https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900" class="download-btn">
+      <span class="btn-icon">🍎</span>
+      Download for iOS
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader" class="download-btn">
+      <span class="btn-icon">🤖</span>
+      Download for Android
+    </a>
+  </div>
+</div>
 
 ## What Makes SmartRSS Special?
 
