@@ -3,7 +3,7 @@ layout: post
 title: "Introducing SmartRSS: The AI-Powered RSS Reader That Transforms How You Consume Content"
 author: "Vinson Guo"
 categories: [apps, rss, mobile-development]
-image: assets/img/smartrss/smartrss-logo.PNG
+image: smartrss/smartrss-logo.PNG
 sticky: true
 ---
 
@@ -11,9 +11,19 @@ In today's information-rich world, staying updated with your favorite blogs, new
 
 ![SmartRSS Logo]({{ site.github.url }}/assets/img/smartrss/smartrss-logo.PNG)
 
+- **📱 iOS**: Available on the [App Store](https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900)
+- **🤖 Android**: Download from [Google Play](https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader)
+
 ## What Makes SmartRSS Special?
 
 SmartRSS isn't just another RSS reader. It's a comprehensive content aggregation platform that brings together feeds from multiple sources in one beautifully designed interface. Here's what sets it apart:
+
+
+### ✨AI Actions
+
+![AI Actions]({{ site.github.url }}/assets/img/smartrss/IMG_7338.jpeg)
+
+Use various AI services to perform custom actions such as smart summaries, translations, keyword extraction, etc.
 
 ### 🌐 Multi-Platform Content Support
 
@@ -45,6 +55,8 @@ SmartRSS puts customization at your fingertips with extensive theming options:
 
 The app provides a clean, distraction-free reading experience with:
 
+![Feeds Hub]({{ site.github.url }}/assets/img/smartrss/IMG_7339.jpeg)
+
 ![Reading Interface]({{ site.github.url }}/assets/img/smartrss/IMG_7337.jpeg)
 
 - **Clean Article Layout** - Focus on content without distractions
@@ -59,15 +71,6 @@ Getting started with SmartRSS is incredibly easy. The app includes:
 - **Quick Examples** - Pre-configured feeds for popular sites like TechCrunch, Medium, YouTube channels, and more
 - **Intelligent Feed Detection** - Just paste a URL and let SmartRSS find the right feed
 - **Group Organization** - Organize your feeds into custom categories
-
-## Cross-Platform Availability
-
-SmartRSS is available on both major mobile platforms:
-
-- **📱 iOS**: Available on the [App Store](https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900)
-- **🤖 Android**: Download from [Google Play](https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader)
-
-Built with Flutter, SmartRSS delivers a consistent, high-performance experience across all devices while maintaining native platform conventions.
 
 ## The Technology Behind SmartRSS
 
