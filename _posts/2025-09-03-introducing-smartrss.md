@@ -32,9 +32,12 @@ SmartRSS isn't just another RSS reader. It's a comprehensive content aggregation
 
 ### ✨AI Actions
 
-[//]: # (![AI Actions]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7338.jpeg&#41;)
+<p style="margin: 0 auto;">
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7338.jpeg" alt="AI Actions"
 style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7341.jpg" alt="Reading Interface"
+style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</p>
 
 Use various AI services to perform custom actions such as smart summaries, translations, keyword extraction, etc.
 
@@ -43,6 +46,7 @@ Use various AI services to perform custom actions such as smart summaries, trans
 One of SmartRSS's standout features is its extensive platform support. The app seamlessly integrates with:
 
 [//]: # (![Add Feed Interface]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7335.jpeg&#41;)
+
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7335.jpeg" alt="Add Feed Interface"
 style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
@@ -62,9 +66,15 @@ This unified approach means you can follow all your favorite content creators an
 SmartRSS puts customization at your fingertips with extensive theming options:
 
 [//]: # (![Theme Customization]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7336.jpeg&#41;)
-<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7336.jpeg" alt="Theme Customizatio"
-style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
+<p style="margin: 0 auto;">
+<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7336.jpeg" alt="Theme Customization"
+style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7340.jpeg" alt="Theme Customization"
+style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</p>
+
+- **1000+ Fonts** - Provide 1000+ fonts
 - **Dynamic Color Themes** - Choose from 12 beautiful color options
 - **Adaptive Color Schemes** - Multiple style options including Tonal Spot, Fidelity, Neutral, Vibrant, and Expressive
 - **Smart UI Adaptation** - The interface adapts to your preferences for optimal readability
@@ -73,15 +83,12 @@ style="max-width: 300px; height: auto; display: block; margin: 20px auto; border
 
 The app provides a clean, distraction-free reading experience with:
 
-[//]: # (![Feeds Hub]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7339.jpeg&#41;)
+<p style="margin: 0 auto;">
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7339.jpeg" alt="Feeds Hub"
-style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-
-
-[//]: # (![Reading Interface]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7337.jpeg&#41;)
+style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7337.jpeg" alt="Reading Interface"
-style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-
+style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</p>
 
 - **Clean Article Layout** - Focus on content without distractions
 - **Smart Content Parsing** - Properly formatted articles with images and multimedia
@@ -115,7 +122,7 @@ SmartRSS represents my vision of what a modern content aggregator should be - po
 I'm continuously working on improving SmartRSS based on user feedback. Some exciting features in development include:
 
 - **Read aloud feature**
-- **Padcast support**
+- **Podcast support**
 - **Desktop companion app**
 
 ## Try SmartRSS Today
