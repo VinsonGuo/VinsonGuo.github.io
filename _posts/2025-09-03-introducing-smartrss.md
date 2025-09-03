@@ -32,11 +32,11 @@ SmartRSS isn't just another RSS reader. It's a comprehensive content aggregation
 
 ### ✨AI Actions
 
-<p style="margin: 0 auto;">
+<p>
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7338.jpeg" alt="AI Actions"
-style="max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7341.jpg" alt="Reading Interface"
-style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
 Use various AI services to perform custom actions such as smart summaries, translations, keyword extraction, etc.
@@ -67,11 +67,11 @@ SmartRSS puts customization at your fingertips with extensive theming options:
 
 [//]: # (![Theme Customization]&#40;{{ site.github.url }}/assets/img/smartrss/IMG_7336.jpeg&#41;)
 
-<p style="margin: 0 auto;">
+<p>
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7336.jpeg" alt="Theme Customization"
-style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7340.jpeg" alt="Theme Customization"
-style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
 - **1000+ Fonts** - Provide 1000+ fonts
@@ -83,11 +83,11 @@ style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-sh
 
 The app provides a clean, distraction-free reading experience with:
 
-<p style="margin: 0 auto;">
+<p>
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7339.jpeg" alt="Feeds Hub"
-style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 <img src="{{ site.github.url }}/assets/img/smartrss/IMG_7337.jpeg" alt="Reading Interface"
-style="max-width: 300px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
 - **Clean Article Layout** - Focus on content without distractions
