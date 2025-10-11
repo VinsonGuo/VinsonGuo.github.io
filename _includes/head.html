@@ -44,27 +44,28 @@
         const codeBlocks = document.querySelectorAll('pre.highlight, pre > code');
         
         codeBlocks.forEach(function(block) {
-          // Skip if it already has a copy button
-          if (block.parentElement.querySelector('.copy-button')) {
+          // Find the pre element or use the parent
+          const preElement = block.tagName === 'PRE' ? block : block.parentElement;
+          
+          // Skip if it already has a copy button container
+          if (preElement.parentElement.querySelector('.code-container')) {
             return;
           }
+          
+          // Create container for code block and copy button
+          const container = document.createElement('div');
+          container.className = 'code-container';
           
           // Create copy button
           const copyButton = document.createElement('button');
           copyButton.className = 'copy-button';
-          copyButton.innerHTML = '📋';
+          copyButton.innerHTML = 'Copy';
           copyButton.title = 'Copy code';
           
-          // Find the pre element or use the parent
-          const preElement = block.tagName === 'PRE' ? block : block.parentElement;
-          
-          // Style the pre element to have relative position
-          if (getComputedStyle(preElement).position === 'static') {
-            preElement.style.position = 'relative';
-          }
-          
-          // Add the copy button to the pre element
-          preElement.appendChild(copyButton);
+          // Wrap the pre element with container
+          preElement.parentNode.insertBefore(container, preElement);
+          container.appendChild(copyButton);
+          container.appendChild(preElement);
           
           // Add click event
           copyButton.addEventListener('click', function() {
@@ -72,12 +73,12 @@
             
             navigator.clipboard.writeText(code).then(function() {
               // Change button text to indicate success
-              copyButton.innerHTML = '✅';
+              copyButton.innerHTML = 'Copied!';
               copyButton.title = 'Copied!';
               
               // Reset after 2 seconds
               setTimeout(function() {
-                copyButton.innerHTML = '📋';
+                copyButton.innerHTML = 'Copy';
                 copyButton.title = 'Copy code';
               }, 2000);
             }).catch(function(err) {
@@ -89,11 +90,11 @@
               document.execCommand('copy');
               document.body.removeChild(textArea);
               
-              copyButton.innerHTML = '✅';
+              copyButton.innerHTML = 'Copied!';
               copyButton.title = 'Copied!';
               
               setTimeout(function() {
-                copyButton.innerHTML = '📋';
+                copyButton.innerHTML = 'Copy';
                 copyButton.title = 'Copy code';
               }, 2000);
             });

@@ -69,44 +69,39 @@ pre.highlight {
   border-radius: 0;
 }
 
+/* Code container for copy button layout */
+.code-container {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
 /* Copy button styles */
 .copy-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  padding: 4px 8px;
+  background: none;
+  border: none;
+  color: #666;
   font-size: 12px;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  z-index: 10;
-  line-height: 1;
+  padding: 4px 0;
+  margin-bottom: 4px;
+  font-family: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .copy-button:hover {
-  background: #e9ecef;
-  border-color: #adb5bd;
+  color: #333;
 }
 
-pre:hover .copy-button {
-  opacity: 1;
+.copy-button:active {
+  color: #000;
 }
 
-/* Show copy button on touch devices */
-@media (hover: none) {
-  .copy-button {
-    opacity: 1;
-  }
+/* Ensure code blocks work well with container */
+.code-container pre {
+  margin-bottom: 0;
 }
 
-/* Ensure code blocks have positioning context for copy button */
-pre {
-  position: relative;
-}
-
-.highlight {
-  position: relative;
+.code-container .highlight {
+  margin-bottom: 0;
 }
