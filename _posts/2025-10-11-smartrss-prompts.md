@@ -18,7 +18,7 @@ Here are some curated prompts you can use right away to make every article smart
 Get a structured summary, key insights, and one thought-provoking question.
 
 ```
-Based on the following requirements, please analyze the article and produce a structured output that includes a concise summary, key takeaways, and additional contextual insights.
+Based on the following requirements, please analyze the article and produce the output that includes a concise summary, key takeaways, and additional contextual insights.
       
 1. Provide a 50 words long concise and engaging summary that captures the article’s core viewpoints and main idea.
 2. List the most important insights or facts using clear and easy-to-understand language.

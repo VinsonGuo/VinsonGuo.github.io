@@ -68,3 +68,45 @@ pre.highlight {
   background-color: transparent;
   border-radius: 0;
 }
+
+/* Copy button styles */
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  line-height: 1;
+}
+
+.copy-button:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+pre:hover .copy-button {
+  opacity: 1;
+}
+
+/* Show copy button on touch devices */
+@media (hover: none) {
+  .copy-button {
+    opacity: 1;
+  }
+}
+
+/* Ensure code blocks have positioning context for copy button */
+pre {
+  position: relative;
+}
+
+.highlight {
+  position: relative;
+}
