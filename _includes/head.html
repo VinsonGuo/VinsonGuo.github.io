@@ -41,14 +41,15 @@
     document.addEventListener('DOMContentLoaded', function() {
       // Add copy buttons to all code blocks
       function addCopyButtons() {
-        const codeBlocks = document.querySelectorAll('pre.highlight, pre > code');
+        // Select only pre elements that haven't been processed yet
+        const codeBlocks = document.querySelectorAll('pre:not(.code-processed)');
         
-        codeBlocks.forEach(function(block) {
-          // Find the pre element or use the parent
-          const preElement = block.tagName === 'PRE' ? block : block.parentElement;
+        codeBlocks.forEach(function(preElement) {
+          // Mark as processed
+          preElement.classList.add('code-processed');
           
-          // Skip if it already has a copy button container
-          if (preElement.parentElement.querySelector('.code-container')) {
+          // Skip if it's already inside a code-container
+          if (preElement.parentElement.classList.contains('code-container')) {
             return;
           }
           
@@ -69,7 +70,8 @@
           
           // Add click event
           copyButton.addEventListener('click', function() {
-            const code = block.tagName === 'CODE' ? block.textContent : block.querySelector('code').textContent;
+            const codeElement = preElement.querySelector('code') || preElement;
+            const code = codeElement.textContent;
             
             navigator.clipboard.writeText(code).then(function() {
               // Change button text to indicate success
