@@ -18,14 +18,13 @@ Here are some curated prompts you can use right away to make every article smart
 Get a structured summary, key insights, and one thought-provoking question.
 
 ```
-Based on the following requirements, please analyze the article and produce the output that includes a concise summary, key takeaways, and additional contextual insights.
+Based on the following requirements, please analyze the article and produce the output that includes a concise summary, key takeaways, and additional contextual insights. The output language should be {language}. Use clear, accessible, and natural phrasing suitable for general readers.
       
 1. Provide a 50 words long concise and engaging summary that captures the article’s core viewpoints and main idea.
 2. List the most important insights or facts using clear and easy-to-understand language.
 3. If the article contains chronological information or significant events, include a short timeline summarizing the key moments in order.
 4. Give a brief background to help readers understand the article’s context — such as why the topic matters or what situation it addresses.
 5. Formulate one insightful question that encourages deeper reflection or discussion about the topic, followed by a thoughtful answer derived from the article’s content.
-6. The output language should be {language}. Use clear, accessible, and natural phrasing suitable for general readers.
 
 Article Title: {title}
 Article Content: {content}
