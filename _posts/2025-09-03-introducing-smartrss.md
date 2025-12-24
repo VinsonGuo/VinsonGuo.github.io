@@ -27,19 +27,45 @@ In today's information-rich world, staying updated with your favorite blogs, new
 
 ## What Makes SmartRSS Special?
 
-SmartRSS isn't just another RSS reader. It's a comprehensive content aggregation platform that brings together feeds from multiple sources in one beautifully designed interface. Here's what sets it apart:
-
+SmartRSS isn't just another RSS reader. It's a comprehensive, cross-platform content aggregation platform designed as a **true platform-agnostic hub**. Access and manage your unified feeds from **any device—be it Android, iOS, macOS, or Windows**—all through a single, beautifully designed and consistent interface.
 
 ### ✨AI Actions
 
 <p>
-<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7338.jpeg" alt="AI Actions"
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-57-21-00_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="AI Actions"
 style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7341.jpg" alt="Reading Interface"
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-56-54-23_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="Reading Interface"
 style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
-Use various AI services to perform custom actions such as smart summaries, translations, keyword extraction, etc.
+The platform empowers users to fully customize AI actions through tailored prompts, seamlessly integrating with major AI providers like OpenAI, Anthropic, and Google Cloud AI. By designing precise instructions, users can leverage these services to perform a wide range of custom tasks—such as generating smart summaries, executing accurate translations, extracting key phrases, analyzing sentiments, or even creating structured data from unstructured text. This flexibility ensures that AI workflows are not only efficient and scalable but also perfectly aligned with specific user needs, enabling both technical and non-technical users to harness advanced AI capabilities without constraints.
+
+
+<p>
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-53-15-36_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="Customized AI Actions"
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-56-43-67_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="AI Providers"
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</p>
+
+Unlock deeper insights at a glance. Move beyond isolated articles and let our advanced AI analyze your feed. SmartRSS can intelligently group up to 100 articles based on their topics, narratives, or underlying connections.
+
+### 🔄 Universal Sync & Integration
+
+<p>
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-54-14-82_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="Universal Sync & Integration"
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-59-13-21_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="Universal Sync & Integration"
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</p>
+
+Never lose an update. SmartRSS serves as the central hub for all your feeds, supporting robust **multi-account synchronization** with virtually any backend service, including:
+
+* **Self-hosted:** FreshRSS, Miniflux
+* **Cloud Services:** Feedbin, Bazqux
+* **Legacy API:** Google Reader API Compatibility
+
+This makes transition seamless and gives you unparalleled freedom in managing your content sources.
 
 ### 🌐 Multi-Platform Content Support
 
@@ -84,9 +110,9 @@ style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-sh
 The app provides a clean, distraction-free reading experience with:
 
 <p>
-<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7339.jpeg" alt="Feeds Hub"
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-55-32-81_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="Feeds Hub"
 style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7337.jpeg" alt="Reading Interface"
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-55-49-67_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="Article List"
 style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
@@ -103,34 +129,26 @@ Getting started with SmartRSS is incredibly easy. The app includes:
 - **Intelligent Feed Detection** - Just paste a URL and let SmartRSS find the right feed
 - **Group Organization** - Organize your feeds into custom categories
 
-## The Technology Behind SmartRSS
+<p>
+<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7335.jpeg" alt="Feeds Hub"
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-55-32-81_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="Feed List"
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</p>
 
-As a mobile developer passionate about creating efficient, user-friendly applications, I built SmartRSS using modern technologies:
 
-- **AI Integration** - Smart content categorization and recommendations
-- **Efficient Data Management** - Fast loading and synchronization
-- **Material Design 3** - Modern, accessible interface design
+### 🎧 Immersive Audio Experience
 
-## Why I Built SmartRSS
+Turn reading into listening. SmartRSS features a powerful **built-in audio player** that transforms your content consumption:
 
-The RSS ecosystem has been fragmented for years. While RSS remains one of the best ways to follow content without algorithmic interference, most readers focus only on traditional feeds. I wanted to create something that bridges the gap between old-school RSS and modern content platforms.
+* **Custom TTS (Text-to-Speech):** Choose from multiple, high-quality voices and engines to have any article read aloud to you. Fully customizable for speed, pitch, and language.
+* **Native Podcast Support:** Subscribe, manage, and play podcast episodes directly within the app, with automatic episode fetching and background playback.
+* **Universal Play Queue:** Seamlessly mix and queue articles (via TTS) and podcast episodes into a single, continuous playback list for a unified listening workflow.
 
-SmartRSS represents my vision of what a modern content aggregator should be - powerful enough for power users, yet simple enough for anyone to pick up and use immediately.
-
-## What's Next?
-
-I'm continuously working on improving SmartRSS based on user feedback. Some exciting features in development include:
-
-- **Read aloud feature**
-- **Podcast support**
-- **Desktop companion app**
-
-## Try SmartRSS Today
-
-Whether you're a developer keeping up with tech news, a writer following industry publications, or simply someone who loves staying informed, SmartRSS can help you take control of your content consumption.
-
-Download SmartRSS today and experience a better way to stay connected with the content that matters to you.
-
+<p>
+<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-58-50-55_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="TTS"
+style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</p>
 ---
 
 *SmartRSS is available now on the [App Store](https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900) and [Google Play](https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader). Have feedback or questions? Feel free to [reach out]({{ site.github.url }}/contact) - I'd love to hear from you!*
