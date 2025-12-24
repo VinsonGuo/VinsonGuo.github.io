@@ -34,7 +34,7 @@ SmartRSS isn't just another RSS reader. It's a comprehensive, cross-platform con
 <p>
 <img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-57-21-00_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="AI Actions"
 style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-<img src="{{ site.github.url }}/assets/img/smartrss/Screenshot_2025-12-24-10-56-54-23_bb53aaa59eb1f897861a3c681a6c04b4.jpg" alt="Reading Interface"
+<img src="{{ site.github.url }}/assets/img/smartrss/IMG_7338.jpeg" alt="Reading Interface"
 style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 </p>
 
