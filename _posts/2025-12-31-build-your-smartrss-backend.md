@@ -93,7 +93,76 @@ docker run hello-world
 
 If you see "Hello from Docker!" - you're ready to go! 🎉
 
-## Step 4: Set Up Your RSS Services
+## Step 4: Choose Your RSS Services
+
+Before setting up, let's understand your options. We have a **2+1 architecture**:
+
+### The Main RSS Reader (Choose One)
+
+You need **one** main RSS reader to manage your feeds:
+
+#### FreshRSS - The Beginner-Friendly Choice ✨
+
+**Perfect for:**
+- First-time self-hosters
+- Users who want a traditional, familiar interface
+- Those who prefer simplicity over advanced features
+
+**Why Choose FreshRSS:**
+- Clean, intuitive web interface
+- Easy mobile app integration
+- Great API support for SmartRSS
+- Simple setup and maintenance
+- Large community and documentation
+
+**Resource Usage:** Light (~100MB RAM)
+
+#### Miniflux - The Power User's Choice 🚀
+
+**Perfect for:**
+- Experienced users who want maximum speed
+- Keyboard shortcut enthusiasts
+- Users who prefer minimal, distraction-free reading
+- Those who want the most modern tech stack
+
+**Why Choose Miniflux:**
+- Blazing fast performance
+- Excellent keyboard navigation
+- Powerful filtering and search
+- Modern, responsive design
+- Built-in feed fetching optimization
+
+**Resource Usage:** Light (~150MB RAM including PostgreSQL)
+
+**Can't Decide?** Start with **FreshRSS** - it's easier for beginners, and you can always switch later!
+
+### Optional: RSSHub - The RSS Supercharger 🔌
+
+**What is RSSHub?**
+
+RSSHub is a game-changer for RSS users. Many modern websites (YouTube, Twitter, Instagram, Telegram, etc.) don't provide RSS feeds anymore. RSSHub solves this by generating RSS feeds from virtually any website!
+
+**Why You Might Want RSSHub:**
+
+1. **No RSS? No Problem!** - Generate feeds from 400+ platforms
+2. **Social Media Feeds** - YouTube channels, Twitter users, Instagram posts
+3. **Custom Content** - Create feeds from specific websites, filters, or keywords
+4. **Flexible & Powerful** - Customize feed content, update frequency, and format
+5. **Free & Open** - No API keys needed, community-driven
+
+**Examples of what RSSHub can do:**
+- Get RSS feeds from your favorite YouTube channels
+- Follow Twitter users without using Twitter
+- Track Instagram posts from specific accounts
+- Monitor Telegram channels
+- Create feeds from websites that don't have RSS
+- And hundreds more use cases!
+
+**Resource Usage:** Moderate (~200MB RAM with Redis)
+
+**Recommendation:** Start without RSSHub. Add it later if you need feeds from social media or non-RSS websites.
+
+## Step 5: Set Up Your Chosen Service
 
 ### Create Project Directory
 
@@ -102,19 +171,17 @@ mkdir -p ~/rss-services
 cd ~/rss-services
 ```
 
-### Create Your Configuration File
+### Option A: FreshRSS Setup (Recommended for Beginners)
 
 ```bash
+mkdir freshrss && cd freshrss
 nano docker-compose.yml
 ```
-
-Copy and paste this complete configuration (this includes FreshRSS, Miniflux, and RSSHub):
 
 ```yaml
 version: "3.8"
 
 services:
-  # FreshRSS - User-friendly RSS reader
   freshrss:
     image: freshrss/freshrss:latest
     container_name: freshrss
@@ -126,12 +193,28 @@ services:
       - ./freshrss-extensions:/var/www/FreshRSS/extensions
     environment:
       - CRON_MIN=*/10
-    # You could change to your timezone
       - TZ=Asia/Shanghai
-    networks:
-      - rss-network
+```
 
-  # Miniflux - Modern, minimalist RSS reader
+**Configuration:**
+- `TZ=Asia/Shanghai` → Change to your timezone
+
+**Save and exit**: Press `Ctrl+X`, then `Y`, then `Enter`
+
+### Option B: Miniflux Setup (For Power Users)
+
+```bash
+cd ~/rss-services
+mkdir miniflux && cd miniflux
+nano docker-compose.yml
+```
+
+Copy and paste this configuration:
+
+```yaml
+version: "3.8"
+
+services:
   miniflux:
     image: miniflux/miniflux:latest
     container_name: miniflux
@@ -143,19 +226,14 @@ services:
       - RUN_MIGRATIONS=1
       - CREATE_ADMIN=1
       - ADMIN_USERNAME=admin
-      # You should change ADMIN_PASSWORD and your_server_ip
       - ADMIN_PASSWORD=changeme
       - BASE_URL=http://your_server_ip:8081
       - CLEANUP_FREQUENCY=24
       - POLLING_FREQUENCY=60
-      # You could change to your timezone
       - TZ=Asia/Shanghai
     depends_on:
       - miniflux-db
-    networks:
-      - rss-network
 
-  # Miniflux PostgreSQL Database
   miniflux-db:
     image: postgres:15
     container_name: miniflux-db
@@ -171,10 +249,35 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    networks:
-      - rss-network
 
-  # RSSHub - Generate RSS feeds from non-RSS websites
+volumes:
+  miniflux-db:
+```
+
+**Configuration:**
+- `ADMIN_USERNAME=admin` → Your desired username
+- `ADMIN_PASSWORD=changeme` → Choose a strong password
+- `BASE_URL=http://your_server_ip:8081` → Replace with your server IP
+- `TZ=Asia/Shanghai` → Change to your timezone
+
+**Save and exit**: Press `Ctrl+X`, then `Y`, then `Enter`
+
+### Option C: Add RSSHub (Optional)
+
+**Only install RSSHub if you need feeds from social media or non-RSS websites.**
+
+```bash
+cd ~/rss-services
+mkdir rsshub && cd rsshub
+nano docker-compose.yml
+```
+
+Copy and paste this configuration:
+
+```yaml
+version: "3.8"
+
+services:
   rsshub:
     image: diygod/rsshub:latest
     container_name: rsshub
@@ -187,10 +290,7 @@ services:
       REDIS_URL: redis://rsshub-redis:6379/
     depends_on:
       - rsshub-redis
-    networks:
-      - rss-network
 
-  # RSSHub Redis Cache
   rsshub-redis:
     image: redis:alpine
     container_name: rsshub-redis
@@ -198,43 +298,84 @@ services:
     volumes:
       - rsshub-redis-data:/data
     command: redis-server --appendonly yes
-    networks:
-      - rss-network
-
-networks:
-  rss-network:
-    driver: bridge
 
 volumes:
-  miniflux-db:
   rsshub-redis-data:
 ```
 
-**Important**: Change these values first!
-- `ADMIN_USERNAME=admin` → Your desired username
-- `ADMIN_PASSWORD=changeme` → Choose a strong password
-- `BASE_URL=http://your_server_ip:8081` → Replace with your server IP
-- `TZ=Asia/Shanghai` → Change to your timezone
-
 **Save and exit**: Press `Ctrl+X`, then `Y`, then `Enter`
 
-## Step 5: Launch Your RSS Services
+**Need advanced RSSHub configuration?** RSSHub offers many advanced features:
+
+**Performance Optimization:**
+- Adjust request concurrency and timeout
+- Configure cache duration per route
+- Use Cloudflare Worker for global caching
+
+**Puppeteer Support (for Instagram/Twitter):**
+Some routes require browser rendering. Add this browser service to your RSSHub docker-compose.yml:
+
+```yaml
+  browser:
+    image: browserless/chrome:latest
+    container_name: rsshub-browser
+    restart: unless-stopped
+    environment:
+      - MAX_CONCURRENT_SESSIONS=5
+      - CONNECTION_TIMEOUT=60000
+
+  rsshub:
+    # ... existing config ...
+    environment:
+      - PUPPETEER_WS_ENDPOINT=ws://browser:3000
+    depends_on:
+      - rsshub-redis
+      - browser
+```
+
+## Step 6: Launch Your Services
+
+Navigate to your chosen service directory and start it:
+
+### For FreshRSS:
 
 ```bash
+cd ~/rss-services/freshrss
 docker compose up -d
 ```
 
-This will download and start all three services. Wait 2-3 minutes for everything to initialize.
+### For Miniflux:
+
+```bash
+cd ~/rss-services/miniflux
+docker compose up -d
+```
+
+### For RSSHub (if installed):
+
+```bash
+cd ~/rss-services/rsshub
+docker compose up -d
+```
+
+This will download and start your services. Wait 2-3 minutes for everything to initialize.
 
 ### Check if Everything is Running
 
 ```bash
-docker compose ps
+# For FreshRSS
+cd ~/rss-services/freshrss && docker compose ps
+
+# For Miniflux
+cd ~/rss-services/miniflux && docker compose ps
+
+# For RSSHub
+cd ~/rss-services/rsshub && docker compose ps
 ```
 
-You should see all services marked as "Up" - that means they're working! 🚀
+You should see services marked as "Up" - that means they're working! 🚀
 
-## Step 6: Access and Configure Your Services
+## Step 7: Access and Configure Your Services
 
 ### FreshRSS Setup
 - **URL**: `http://your_server_ip:8080`
@@ -242,7 +383,7 @@ You should see all services marked as "Up" - that means they're working! 🚀
 - **Perfect for**: Beginners who want a simple, clean interface
 
 ### Miniflux Setup
-- **URL**: `http://your_server_ip:8081`  
+- **URL**: `http://your_server_ip:8081`
 - **Login**: Use the username/password you set in the config file
 - **Perfect for**: Users who want speed and powerful features
 
@@ -250,8 +391,9 @@ You should see all services marked as "Up" - that means they're working! 🚀
 - **URL**: `http://your_server_ip:1200`
 - **No login required** - it just works!
 - **Use it to**: Generate RSS feeds from YouTube, Twitter, Instagram, etc.
+- **Documentation**: Visit the URL to see all available routes and examples
 
-## Step 7: Enable API Access for SmartRSS
+## Step 8: Enable API Access for SmartRSS
 
 Now the exciting part - connecting your RSS services to SmartRSS!
 
@@ -271,13 +413,7 @@ Now the exciting part - connecting your RSS services to SmartRSS!
 
 Great news! **Miniflux API is enabled by default** - no setup needed!
 
-**To get your API credentials:**
-1. **Login to Miniflux** at `http://your_server_ip:8081`
-2. **Go to Settings** → **API**
-3. **Copy your API credentials** (or create a new API key)
-4. **Save these credentials** for SmartRSS setup!
-
-## Step 8: Connect SmartRSS to Your Server
+## Step 9: Connect SmartRSS to Your Server
 
 Now you can connect SmartRSS to your self-hosted services!
 
@@ -298,7 +434,7 @@ Now you can connect SmartRSS to your self-hosted services!
 3. **Enter your server details**:
    - **Server URL**: `http://your_server_ip:8081/`
    - **Username**: Your Miniflux username
-   - **Password**: Your API password (from Step 7)
+   - **Password**: Your Miniflux password
 4. **Test connection** and you're ready to go!
 
 ### Add Feeds from RSSHub
@@ -318,30 +454,69 @@ Want to follow a YouTube channel or Twitter user that doesn't have RSS?
 
 ## Quick Management Commands
 
-### Check if Services are Running
+### Check Service Status
 
 ```bash
-cd ~/rss-services
-docker compose ps
+# For FreshRSS
+cd ~/rss-services/freshrss && docker compose ps
+
+# For Miniflux
+cd ~/rss-services/miniflux && docker compose ps
+
+# For RSSHub
+cd ~/rss-services/rsshub && docker compose ps
 ```
 
 ### View Logs (if something goes wrong)
 
 ```bash
-docker compose logs -f
+# For FreshRSS
+cd ~/rss-services/freshrss && docker compose logs -f
+
+# For Miniflux
+cd ~/rss-services/miniflux && docker compose logs -f
+
+# For RSSHub
+cd ~/rss-services/rsshub && docker compose logs -f
 ```
 
-### Restart All Services
+### Restart a Service
 
 ```bash
-docker compose restart
+# For FreshRSS
+cd ~/rss-services/freshrss && docker compose restart
+
+# For Miniflux
+cd ~/rss-services/miniflux && docker compose restart
+
+# For RSSHub
+cd ~/rss-services/rsshub && docker compose restart
 ```
 
 ### Update Your Services
 
 ```bash
-docker compose pull
-docker compose up -d
+# For FreshRSS
+cd ~/rss-services/freshrss && docker compose pull && docker compose up -d
+
+# For Miniflux
+cd ~/rss-services/miniflux && docker compose pull && docker compose up -d
+
+# For RSSHub
+cd ~/rss-services/rsshub && docker compose pull && docker compose up -d
+```
+
+### Stop Services
+
+```bash
+# For FreshRSS
+cd ~/rss-services/freshrss && docker compose down
+
+# For Miniflux
+cd ~/rss-services/miniflux && docker compose down
+
+# For RSSHub
+cd ~/rss-services/rsshub && docker compose down
 ```
 
 ## Common Issues and Fixes
@@ -349,7 +524,8 @@ docker compose up -d
 ### Services Won't Start
 
 ```bash
-# Check what's wrong
+# Check what's wrong (replace with your service)
+cd ~/rss-services/freshrss  # or miniflux or rsshub
 docker compose logs
 
 # Restart everything
@@ -358,9 +534,9 @@ docker compose restart
 
 ### Can't Access Your Server
 
-Make sure your VPS provider's firewall allows these ports:
+Make sure your VPS provider's firewall allows these ports (only for services you installed):
 - **8080** (FreshRSS)
-- **8081** (Miniflux)  
+- **8081** (Miniflux)
 - **1200** (RSSHub)
 
 ### SmartRSS Won't Connect
@@ -368,23 +544,6 @@ Make sure your VPS provider's firewall allows these ports:
 1. **Double-check your server URL** - include `http://` and the port number
 2. **Verify your API credentials** - re-generate them if needed
 3. **Test the web interface** - make sure you can login in your browser first
-
-## What's Next?
-
-Congratulations! 🎉 You now have:
-
-✅ **FreshRSS** - A beautiful web interface for managing feeds  
-✅ **Miniflux** - A lightning-fast reading experience  
-✅ **RSSHub** - RSS feeds for ANY website  
-✅ **SmartRSS Integration** - Access everything from your mobile app!
-
-### Optional Upgrades
-
-Once you're comfortable, consider:
-
-1. **Get a domain name** - Replace your IP with a custom domain
-2. **Enable HTTPS** - Use free SSL certificates with Let's Encrypt
-3. **Set mobile apps** - Download SmartRSS from [iOS App Store](https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900) or [Google Play](https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader)
 
 ## Conclusion
 
@@ -397,4 +556,23 @@ Start adding your favorite feeds and enjoy the ultimate RSS experience!
 - [Miniflux Documentation](https://miniflux.app/docs/)  
 - [RSSHub Documentation](https://docs.rsshub.app/)
 
-Happy reading! 📱✨
+Happy reading! 
+
+---
+
+*Ready to supercharge your RSS experience? Download today and start using these powerful AI prompts!*
+
+<div class="app-download-section">
+  <h3>📱 Download SmartRSS Now</h3>
+  <p>Available on both iOS and Android platforms</p>
+  <div class="download-buttons">
+    <a href="https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900" class="download-btn">
+      <span class="btn-icon">🍎</span>
+      Download for iOS
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader" class="download-btn">
+      <span class="btn-icon">🤖</span>
+      Download for Android
+    </a>
+  </div>
+</div>
