@@ -305,34 +305,6 @@ volumes:
 
 **Save and exit**: Press `Ctrl+X`, then `Y`, then `Enter`
 
-**Need advanced RSSHub configuration?** RSSHub offers many advanced features:
-
-**Performance Optimization:**
-- Adjust request concurrency and timeout
-- Configure cache duration per route
-- Use Cloudflare Worker for global caching
-
-**Puppeteer Support (for Instagram/Twitter):**
-Some routes require browser rendering. Add this browser service to your RSSHub docker-compose.yml:
-
-```yaml
-  browser:
-    image: browserless/chrome:latest
-    container_name: rsshub-browser
-    restart: unless-stopped
-    environment:
-      - MAX_CONCURRENT_SESSIONS=5
-      - CONNECTION_TIMEOUT=60000
-
-  rsshub:
-    # ... existing config ...
-    environment:
-      - PUPPETEER_WS_ENDPOINT=ws://browser:3000
-    depends_on:
-      - rsshub-redis
-      - browser
-```
-
 ## Step 6: Launch Your Services
 
 Navigate to your chosen service directory and start it:
