@@ -91,7 +91,7 @@ This will automatically install Docker and everything you need. Grab a coffee - 
 docker run hello-world
 ```
 
-If you see "Hello from Docker!" - you're ready to go! 🎉
+If you see "Hello from Docker!" - you're ready to go! 
 
 ## Step 4: Choose Your RSS Services
 
@@ -101,7 +101,7 @@ Before setting up, let's understand your options. We have a **2+1 architecture**
 
 You need **one** main RSS reader to manage your feeds:
 
-#### FreshRSS - The Beginner-Friendly Choice ✨
+#### FreshRSS - The Beginner-Friendly Choice 
 
 **Perfect for:**
 - First-time self-hosters
@@ -117,7 +117,7 @@ You need **one** main RSS reader to manage your feeds:
 
 **Resource Usage:** Light (~100MB RAM)
 
-#### Miniflux - The Power User's Choice 🚀
+#### Miniflux - The Power User's Choice 
 
 **Perfect for:**
 - Experienced users who want maximum speed
@@ -136,7 +136,7 @@ You need **one** main RSS reader to manage your feeds:
 
 **Can't Decide?** Start with **FreshRSS** - it's easier for beginners, and you can always switch later!
 
-### Optional: RSSHub - The RSS Supercharger 🔌
+### Optional: RSSHub - The RSS Supercharger 
 
 **What is RSSHub?**
 
