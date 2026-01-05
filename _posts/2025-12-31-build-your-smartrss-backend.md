@@ -345,7 +345,7 @@ cd ~/rss-services/miniflux && docker compose ps
 cd ~/rss-services/rsshub && docker compose ps
 ```
 
-You should see services marked as "Up" - that means they're working! 🚀
+You should see services marked as "Up" - that means they're working!
 
 ## Step 7: Access and Configure Your Services
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "💡 Supercharge Your Reading with SmartRSS AI Prompts"
+title: "Supercharge Your Reading with SmartRSS AI Prompts"
 author: "Vinson Guo"
 categories: [apps, rss, ai-prompts]
 image: assets/img/smartrss/smartrss-logo.PNG
@@ -15,7 +15,7 @@ Here are some curated prompts you can use right away to make every article smart
 
 ## 📝 1. Article Analyzer
 
-Get a structured summary, key insights, and one thought-provoking question.
+Get a structured summary, key insights, and timeline.
 
 ```
 Based on the following requirements, please analyze the article and produce the output that includes a concise summary, key takeaways, and additional contextual insights. The output language should be {language}. Use clear, accessible, and natural phrasing suitable for general readers.
@@ -24,7 +24,6 @@ Based on the following requirements, please analyze the article and produce the 
 2. List the most important insights or facts using clear and easy-to-understand language.
 3. If the article contains chronological information or significant events, include a short timeline summarizing the key moments in order.
 4. Give a brief background to help readers understand the article’s context — such as why the topic matters or what situation it addresses.
-5. Formulate one insightful question that encourages deeper reflection or discussion about the topic, followed by a thoughtful answer derived from the article’s content.
 
 Article Title: {title}
 Article Content: {content}
