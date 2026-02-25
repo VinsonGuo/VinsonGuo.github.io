@@ -194,7 +194,7 @@ Happy reading 🧠💫
 
 <div class="app-download-section">
   <h3>📱 Download SmartRSS Now</h3>
-  <p>Available on both iOS and Android platforms</p>
+  <p>Available on iOS, Android, and Windows platforms</p>
   <div class="download-buttons">
     <a href="https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900" class="download-btn">
       <span class="btn-icon">🍎</span>
@@ -203,6 +203,10 @@ Happy reading 🧠💫
     <a href="https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader" class="download-btn">
       <span class="btn-icon">🤖</span>
       Download for Android
+    </a>
+    <a href="https://github.com/VinsonGuo/SmartRSS-Windows/releases" class="download-btn">
+      <span class="btn-icon">💻</span>
+      Download for Windows
     </a>
   </div>
 </div>
