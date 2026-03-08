@@ -3,7 +3,6 @@ layout: post
 title: "Introducing SmartRSS: The AI-Powered RSS Reader That Transforms How You Consume Content"
 author: "Vinson Guo"
 categories: [apps, rss, mobile-development]
-image: assets/img/smartrss/smartrss-logo.PNG
 sticky: true
 ---
 

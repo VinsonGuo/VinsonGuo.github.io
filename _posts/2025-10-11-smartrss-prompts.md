@@ -3,7 +3,6 @@ layout: post
 title: "Supercharge Your Reading with SmartRSS AI Prompts"
 author: "Vinson Guo"
 categories: [apps, rss, ai-prompts]
-image: assets/img/smartrss/smartrss-logo.PNG
 ---
 
 Hey there, SmartRSS readers 👋
