@@ -68,12 +68,10 @@ Turn every article into a mini English lesson.
 
 ```
 Please identify difficult words or idioms in the following article.  
-For each, provide:
-- Definition
+For each, provide a list:
+- {language} Definition
 - Example sentence
 - Simple synonym
-
-Then summarize the article in simple {language} (around 80 words).
 
 Title: {title}  
 Content: {content}
