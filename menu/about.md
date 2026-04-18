@@ -28,4 +28,6 @@ Some of my notable open-source projects include:
 Feel free to reach out if you'd like to collaborate on projects, discuss mobile development, or just say hello!
 
 - **GitHub**: [@VinsonGuo](https://github.com/VinsonGuo)
+- **Bluesky**: [@VinsonGuo](https://bsky.app/profile/vinsonguo.bsky.social)
 - **Twitter**: [@vinson_guo](https://twitter.com/vinson_guo)
+- **Email**: [guoziwei93@gmail.com](mailto:guoziwei93@gmail.com)

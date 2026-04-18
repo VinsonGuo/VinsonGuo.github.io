@@ -9,6 +9,7 @@ I'd love to hear from you! Whether you want to collaborate on a project, discuss
 ### Get In Touch
 
 - **GitHub**: [@VinsonGuo](https://github.com/VinsonGuo) - Check out my projects and feel free to open issues or contribute
+- **Bluesky**: [@VinsonGuo](https://bsky.app/profile/vinsonguo.bsky.social) - Follow me for updates on mobile development and tech
 - **Twitter**: [@vinson_guo](https://twitter.com/vinson_guo) - Follow me for updates on mobile development and tech
 - **Email**: [guoziwei93@gmail.com](mailto:guoziwei93@gmail.com) - Feel free to send me a message
 
