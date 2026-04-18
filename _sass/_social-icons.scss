@@ -62,7 +62,12 @@
   @include social-media-icon($codepen-color, $icon-transition-time);
 }
 
-.fa-rss-square {
+.fa-square-rss {
   padding: 5px;
   @include social-media-icon($rss-color, $icon-transition-time);
+}
+
+.fa-bluesky {
+  padding: 5px;
+  @include social-media-icon($bluesky-color, $icon-transition-time);
 }
