@@ -60,13 +60,15 @@
 .download-buttons {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
   margin-top: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .download-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 15px 25px;
   background-color: #0071e3;
@@ -77,8 +79,8 @@
   font-size: 1.1rem;
   transition: all 0.3s ease;
   border: none;
-  min-width: 200px;
   justify-content: center;
+  width: 100%;
 }
 
 .download-btn:hover {
@@ -94,8 +96,13 @@
 }
 
 @media (max-width: 600px) {
+  .download-buttons {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
   .download-btn {
-    width: 100%;
-    max-width: 280px;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 }
