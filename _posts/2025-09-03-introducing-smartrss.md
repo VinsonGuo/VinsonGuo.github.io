@@ -25,6 +25,10 @@ In today's information-rich world, staying updated with your favorite blogs, new
       <span class="btn-icon">💻</span>
       Download for Windows
     </a>
+    <a href="https://github.com/VinsonGuo/SmartRSS-Linux/releases" class="download-btn">
+      <span class="btn-icon">💻</span>
+      Download for Linux
+    </a>
   </div>
 </div>
 
