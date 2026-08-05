@@ -4,28 +4,21 @@ title: About Me
 permalink: /about
 ---
 
-Hi, I'm **Vinson Guo**, a mobile developer based in Chengdu, China. I specialize in cross-platform mobile development with expertise in Android, iOS, Flutter, and React Native.
+Hi, I'm **Vinson Guo**, an independent app developer based in China, building cross-platform apps with Android, iOS, Flutter, and React Native.
 
 ### What I Do
 
-I'm passionate about creating high-quality mobile applications and contributing to the open-source community. My work focuses on:
+- **Independent Development**: Designing, building, and shipping my own products end to end, from idea to App Store
+- **I'll Help You Build Apps**: Partnering with teams and individuals to plan, develop, and launch mobile applications. Clear processes and fast delivery, with reasonable pricing
+- **End-to-End Support**: From first sketch to store release, and ongoing maintenance and updates after launch
 
-- **Mobile Development**: Building native and cross-platform mobile applications
-- **Open Source**: Contributing to and maintaining various Android and mobile development libraries
-- **Technical Writing**: Sharing knowledge and best practices with the developer community
+### Featured Project
 
-### Featured Projects
-
-Some of my notable open-source projects include:
-
-- **[android-kline](https://github.com/VinsonGuo/android-kline)**: Android K-line and time-sharing chart library
-- **[ComposeLazyTab](https://github.com/VinsonGuo/ComposeLazyTab)**: Lazy loading library for Jetpack Compose
-- **[LlamaChat](https://github.com/VinsonGuo/LlamaChat)**: Mobile app for chatting with local large language models
-- **[ReconnectWebSocketWrapper](https://github.com/VinsonGuo/ReconnectWebSocketWrapper)**: WebSocket reconnection wrapper
+**[SmartRSS]({{ site.github.url }}/projects/smartrss)**: An AI-powered, cross-platform RSS reader available on iOS, Android, macOS, Windows, and Linux. Featuring AI summaries and aggregation, universal sync, podcast support, and deep theming. See the [project page]({{ site.github.url }}/projects/smartrss) for details.
 
 ### Connect With Me
 
-Feel free to reach out if you'd like to collaborate on projects, discuss mobile development, or just say hello!
+Feel free to reach out if you'd like to collaborate on a project, need help building an app, or just want to say hello!
 
 - **GitHub**: [@VinsonGuo](https://github.com/VinsonGuo)
 - **Bluesky**: [@VinsonGuo](https://bsky.app/profile/vinsonguo.bsky.social)

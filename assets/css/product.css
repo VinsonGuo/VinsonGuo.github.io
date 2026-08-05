@@ -5,37 +5,37 @@
 
 /* ---------- Works list page (uses the blog shell) ---------- */
 
-body.works .container {
+body.projects .container {
   width: min(980px, 92vw);
 }
 
-body.works .content-container {
+body.projects .content-container {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-.works-head {
+.projects-head {
   margin-bottom: 48px;
 }
 
-.works-head h1 {
+.projects-head h1 {
   font-size: clamp(2.2rem, 5vw, 3.2rem);
   letter-spacing: -0.03em;
   line-height: 1.1;
   margin-bottom: 12px;
 }
 
-.works-head p {
+.projects-head p {
   font-size: 17px;
   color: var(--p-text-2);
 }
 
-.works-grid {
+.projects-grid {
   display: grid;
   gap: 20px;
 }
 
-.works-card {
+.projects-card {
   display: block;
   background: var(--p-bg-soft);
   border: 1px solid transparent;
@@ -46,20 +46,20 @@ body.works .content-container {
     box-shadow 0.25s ease, background 0.25s ease;
 }
 
-.works-card:hover {
+.projects-card:hover {
   transform: translateY(-4px);
   background: #fff;
   border-color: var(--p-border);
   box-shadow: var(--p-shadow-sm);
 }
 
-.works-card-top {
+.projects-card-top {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.works-card-logo {
+.projects-card-logo {
   width: 64px;
   height: 64px;
   border-radius: 16px;
@@ -67,11 +67,11 @@ body.works .content-container {
   flex-shrink: 0;
 }
 
-.works-card-info {
+.projects-card-info {
   flex: 1;
 }
 
-.works-card-info h2 {
+.projects-card-info h2 {
   font-size: 21px;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -79,30 +79,30 @@ body.works .content-container {
   margin-bottom: 4px;
 }
 
-.works-card-info p {
+.projects-card-info p {
   font-size: 15px;
   color: var(--p-text-2);
 }
 
-.works-card-arrow {
+.projects-card-arrow {
   font-size: 22px;
   color: var(--p-text-2);
   transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.works-card:hover .works-card-arrow {
+.projects-card:hover .projects-card-arrow {
   transform: translateX(4px);
   color: var(--p-accent);
 }
 
-.works-card-chips {
+.projects-card-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 18px;
 }
 
-.works-chip {
+.projects-chip {
   font-size: 12px;
   font-weight: 600;
   color: var(--p-text-2);
@@ -113,10 +113,10 @@ body.works .content-container {
 }
 
 @media (max-width: 480px) {
-  .works-card-top {
+  .projects-card-top {
     flex-wrap: wrap;
   }
-  .works-card-arrow {
+  .projects-card-arrow {
     display: none;
   }
 }
@@ -286,32 +286,23 @@ a {
   box-shadow: 0 8px 24px rgba(0, 113, 227, 0.35);
 }
 
-.product-hero-shot {
-  margin: 64px auto 0;
-  max-width: 860px;
-  border-radius: var(--p-radius-lg);
-  overflow: hidden;
-  box-shadow: var(--p-shadow);
-  border: 1px solid var(--p-border);
-}
-
 /* ---------- Sync strip ---------- */
 
-.product-strip {
+.product-integrations {
   background: var(--p-bg-soft);
   border-top: 1px solid var(--p-border);
   border-bottom: 1px solid var(--p-border);
   margin-top: 80px;
 }
 
-.product-strip-inner {
+.product-integrations-inner {
   max-width: 980px;
   margin: 0 auto;
   padding: 44px 22px;
   text-align: center;
 }
 
-.product-strip-label {
+.product-integrations-label {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -320,14 +311,14 @@ a {
   margin-bottom: 20px;
 }
 
-.product-strip-items {
+.product-integrations-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
 
-.product-strip-item {
+.product-integrations-item {
   font-size: 13px;
   font-weight: 500;
   color: var(--p-text);
@@ -413,6 +404,10 @@ a {
 }
 
 /* ---------- Showcase ---------- */
+
+.product-showcase {
+  padding-top: 56px;
+}
 
 .product-showcase-grid {
   display: grid;
@@ -571,7 +566,7 @@ a {
     padding: 11px 18px;
     font-size: 14px;
   }
-  .product-strip-inner {
+  .product-integrations-inner {
     padding: 36px 22px;
   }
   .product-section {
@@ -586,9 +581,6 @@ a {
   .product-showcase-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-  }
-  .product-hero-shot {
-    margin-top: 44px;
   }
   .product-final {
     padding: 72px 22px;

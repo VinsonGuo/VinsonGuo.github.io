@@ -5,8 +5,11 @@ order: 1
 tagline: "Read. Listen. Never miss a story again."
 description: "SmartRSS is an AI-powered RSS reader for iOS, Android, macOS, Windows and Linux. One unified feed hub with AI summaries, AI aggregation, podcasts, and universal sync."
 logo: /assets/img/smartrss/smartrss-logo.PNG
-hero_screenshot: /assets/img/smartrss/smartrss_introduce.png
 accent: "#0071e3"
+integrations_label: "Syncs with"
+features_title: "Built to make reading effortless"
+final_title: "Start reading smarter"
+final_text: "Free on iOS, Android, macOS, Windows, and Linux."
 platforms:
   - iOS
   - Android
@@ -26,7 +29,7 @@ downloads:
   - label: Linux
     note: GitHub Releases
     url: https://github.com/VinsonGuo/SmartRSS-Linux/releases
-sync_services:
+integrations:
   - FreshRSS
   - Miniflux
   - Feedly
@@ -35,14 +38,6 @@ sync_services:
   - Bazqux
   - Inoreader
   - Google Reader API
-content_types:
-  - RSS Feeds
-  - Medium
-  - Mastodon
-  - Bluesky
-  - Substack
-  - YouTube
-  - Reddit
 features:
   - icon: sparkles
     title: Custom AI Actions
