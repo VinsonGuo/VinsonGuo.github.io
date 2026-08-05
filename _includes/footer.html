@@ -1,4 +1,9 @@
-<footer class="footer">
-  {% include social-icons.html %}
-  <div class="footer-description"><a href="{{ site.github.url }}/">{{ site.title }} | {{ site.description }} by {{ site.author }}</a></div>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="{{ site.github.url }}/">Articles</a>
+    <a href="{{ site.github.url }}/projects">Projects</a>
+    <a href="{{ site.github.url }}/about">About</a>
+    <span class="site-footer-copy">© {{ 'now' | date: "%Y" }} {{ site.author }}</span>
+    <div class="social-icons">{% include social-icons.html %}</div>
+  </div>
 </footer>

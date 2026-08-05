@@ -3,6 +3,7 @@ layout: post
 title: "Build Your RSS Backend for SmartRSS: A Beginner's Guide to FreshRSS, Miniflux, and RSSHub"
 author: "Vinson Guo"
 categories: [tutorial, self-hosting, rss, docker, smartrss]
+image: assets/img/smartrss/Screenshot_2025-12-24-10-55-32-81_bb53aaa59eb1f897861a3c681a6c04b4.jpg
 ---
 
 Want to supercharge your **SmartRSS** experience with a powerful, self-hosted backend? This guide will show you how to set up **FreshRSS**, **Miniflux**, and **RSSHub** - even if you've never touched a server before! These services will sync seamlessly with SmartRSS, giving you complete control over your RSS reading experience.

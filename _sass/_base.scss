@@ -2,28 +2,37 @@
   Base
 */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: $serif-font-family;
-  font-size: 18px;
+  font-size: 17px;
   color: $body-color;
-  line-height: 1.75rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
 @media (max-width: $elements-responsive-width) {
   body {
-    font-size: 14px;
-    line-height: 1.5rem;
+    font-size: 15px;
+    line-height: 1.6;
   }
 
   body h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 2rem;
   }
 }
 
 h1{
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 h1 a {
@@ -36,27 +45,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  text-decoration: underline;
-  color: $dark-gray-color;
+  text-decoration: none;
+  color: $link-color;
 }
 
 a:hover {
-  color: $link-color;
-  border-bottom: none;
+  text-decoration: underline;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 14px;
 }
 
 blockquote {
-  margin: 10px 20px 10px;
-  padding: 0px 15px;
-  border-left: 0.25em solid $extra-light-gray-color;
+  margin: 1.5rem 0;
+  padding: 0 1.25rem;
+  border-left: 3px solid $extra-light-gray-color;
   color: $light-gray-color;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 hr {

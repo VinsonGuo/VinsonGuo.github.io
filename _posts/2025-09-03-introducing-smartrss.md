@@ -4,6 +4,7 @@ title: "Introducing SmartRSS: An AI-Powered, Cross-Platform RSS Reader"
 author: "Vinson Guo"
 categories: [apps, rss, mobile-development]
 sticky: true
+image: assets/img/smartrss/smartrss-logo.PNG
 ---
 
 In today's information-rich world, staying updated with your favorite blogs, news sites, and content creators can be overwhelming. That's why I'm excited to introduce **SmartRSS** — an AI-powered RSS reader that transforms how you discover, organize, and consume content across all your devices.

@@ -1,18 +1,9 @@
 /* ============================================================
-   Product showcase pages: light minimal, Apple-inspired.
-   Deliberately separate from the blog stylesheet.
+   Projects list + product showcase pages: light minimal, Apple-inspired.
+   Loaded only on /projects and /projects/*.
    ============================================================ */
 
-/* ---------- Works list page (uses the blog shell) ---------- */
-
-body.projects .container {
-  width: min(980px, 92vw);
-}
-
-body.projects .content-container {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-}
+/* ---------- Projects list page ---------- */
 
 .projects-head {
   margin-bottom: 48px;
@@ -72,14 +63,15 @@ body.projects .content-container {
 }
 
 .projects-card-info h2 {
+  margin: 0 0 4px;
   font-size: 21px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--p-text);
-  margin-bottom: 4px;
 }
 
 .projects-card-info p {
+  margin: 0;
   font-size: 15px;
   color: var(--p-text-2);
 }
@@ -145,12 +137,19 @@ html {
 }
 
 body.product-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: var(--p-bg);
   color: var(--p-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+.product-page main {
+  flex: 1 0 auto;
 }
 
 img {
@@ -175,10 +174,23 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.product-nav-inner {
+.product-nav-inner,
+.product-footer-inner,
+.product-hero-inner,
+.product-strip-inner,
+.product-section-inner,
+.product-final-inner {
+  width: 92vw;
   max-width: 980px;
-  margin: 0 auto;
-  padding: 0 22px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.product-nav-inner {
+  padding-top: 0;
+  padding-bottom: 0;
   height: 52px;
   display: flex;
   align-items: center;
@@ -209,12 +221,10 @@ a {
 /* ---------- Hero ---------- */
 
 .product-hero {
-  padding: 88px 22px 0;
+  padding: 88px 0 0;
 }
 
 .product-hero-inner {
-  max-width: 980px;
-  margin: 0 auto;
   text-align: center;
   animation: p-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -298,7 +308,7 @@ a {
 .product-integrations-inner {
   max-width: 980px;
   margin: 0 auto;
-  padding: 44px 22px;
+  padding: 44px 0;
   text-align: center;
 }
 
@@ -331,7 +341,7 @@ a {
 /* ---------- Sections ---------- */
 
 .product-section {
-  padding: 96px 22px 0;
+  padding: 96px 0 0;
 }
 
 .product-section-inner {
@@ -451,13 +461,12 @@ a {
 .product-final {
   background: var(--p-text);
   color: #fff;
-  padding: 96px 22px;
+  padding: 96px 0;
   text-align: center;
 }
 
 .product-final-inner {
-  max-width: 640px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .product-final h2 {
@@ -503,9 +512,8 @@ a {
 }
 
 .product-footer-inner {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 28px 22px;
+  padding-top: 28px;
+  padding-bottom: 28px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -567,10 +575,10 @@ a {
     font-size: 14px;
   }
   .product-integrations-inner {
-    padding: 36px 22px;
+    padding: 36px 0;
   }
   .product-section {
-    padding: 64px 22px 0;
+    padding: 64px 0 0;
   }
   .product-section-title {
     margin-bottom: 36px;
@@ -583,7 +591,7 @@ a {
     gap: 12px;
   }
   .product-final {
-    padding: 72px 22px;
+    padding: 72px 0;
   }
 }
 
