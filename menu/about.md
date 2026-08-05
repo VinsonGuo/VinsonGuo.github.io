@@ -14,7 +14,7 @@ Hi, I'm **Vinson Guo**, an independent app developer based in China, building cr
 
 ### Featured Project
 
-**[SmartRSS]({{ site.github.url }}/projects/smartrss)**: An AI-powered, cross-platform RSS reader available on iOS, Android, macOS, Windows, and Linux. Featuring AI summaries and aggregation, universal sync, podcast support, and deep theming. See the [project page]({{ site.github.url }}/projects/smartrss) for details.
+**[SmartRSS]({{ site.github.url }}/projects/smartrss)**: An AI-powered, cross-platform RSS reader. Featuring AI summaries and aggregation, universal sync, podcast support, and deep theming.
 
 ### Connect With Me
 

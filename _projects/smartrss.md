@@ -58,10 +58,10 @@ features:
     title: Read With Your Ears
     text: High-quality TTS voices, native podcast support, and a universal play queue that mixes articles and episodes.
 showcase_screenshots:
-  - /assets/img/smartrss/IMG_7339.jpeg
-  - /assets/img/smartrss/IMG_7338.jpeg
-  - /assets/img/smartrss/IMG_7341.jpg
-  - /assets/img/smartrss/IMG_7335.jpeg
+  - /assets/img/smartrss/screenshot1.PNG
+  - /assets/img/smartrss/screenshot2.PNG
+  - /assets/img/smartrss/screenshot3.PNG
+  - /assets/img/smartrss/screenshot4.PNG
 ---
 
 ## One feed hub for everything you follow
