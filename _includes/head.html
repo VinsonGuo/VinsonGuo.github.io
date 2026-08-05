@@ -10,6 +10,9 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
+  {% if page.body_class == "works" %}
+    <link rel="stylesheet" href="{{ site.github.url }}/assets/css/product.css">
+  {% endif %}
   <!-- Use Atom -->
   {% feed_meta %}
   <!-- Use RSS-2.0 -->

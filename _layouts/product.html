@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  {% include product-head.html %}
+  <body class="product-page">
+    <nav class="product-nav">
+      <div class="product-nav-inner">
+        <a class="product-brand" href="{{ site.github.url }}/">{{ site.title }}</a>
+        <div class="product-nav-links">
+          <a href="{{ site.github.url }}/">Articles</a>
+          <a href="{{ site.github.url }}/works">Works</a>
+          <a href="{{ site.github.url }}/about">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="product-hero">
+        <div class="product-hero-inner">
+          <img class="product-logo" src="{{ site.github.url }}{{ page.logo }}" alt="{{ page.title }} logo">
+          <p class="product-badge">{{ page.platforms | join: " · " }}</p>
+          <h1 class="product-title">{{ page.title }}</h1>
+          <p class="product-tagline">{{ page.tagline }}</p>
+          <div class="product-cta">
+            {% for d in page.downloads %}
+              <a class="product-cta-btn" href="{{ d.url }}" target="_blank" rel="noopener">
+                {{ d.label }}
+                <small>{{ d.note }}</small>
+              </a>
+            {% endfor %}
+          </div>
+          <figure class="product-hero-shot">
+            <img src="{{ site.github.url }}{{ page.hero_screenshot }}" alt="{{ page.title }} screenshot">
+          </figure>
+        </div>
+      </section>
+
+      <section class="product-strip">
+        <div class="product-strip-inner">
+          <p class="product-strip-label">Syncs with</p>
+          <div class="product-strip-items">
+            {% for s in page.sync_services %}
+              <span class="product-strip-item">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="product-section product-features">
+        <div class="product-section-inner">
+          <h2 class="product-section-title">Built to make reading effortless</h2>
+          <div class="product-feature-grid">
+            {% for f in page.features %}
+              <div class="product-feature-card">
+                <span class="product-feature-icon">{% include product-icon.html icon=f.icon %}</span>
+                <h3>{{ f.title }}</h3>
+                <p>{{ f.text }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="product-section product-showcase">
+        <div class="product-section-inner">
+          <h2 class="product-section-title">One interface, everywhere</h2>
+          <div class="product-showcase-grid">
+            {% for img in page.showcase_screenshots %}
+              <figure class="product-showcase-item">
+                <img src="{{ site.github.url }}{{ img }}" alt="{{ page.title }} screenshot">
+              </figure>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="product-section product-story">
+        <div class="product-section-inner product-story-body">
+          {{ content }}
+        </div>
+      </section>
+
+      <section class="product-final">
+        <div class="product-final-inner">
+          <h2>Start reading smarter</h2>
+          <p>Free on iOS, Android, macOS, Windows, and Linux.</p>
+          <div class="product-cta">
+            {% for d in page.downloads %}
+              <a class="product-cta-btn" href="{{ d.url }}" target="_blank" rel="noopener">
+                {{ d.label }}
+                <small>{{ d.note }}</small>
+              </a>
+            {% endfor %}
+          </div>
+          <a class="product-back" href="{{ site.github.url }}/works">← All works</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="product-footer">
+      <div class="product-footer-inner">
+        <a href="{{ site.github.url }}/">Articles</a>
+        <a href="{{ site.github.url }}/works">Works</a>
+        <a href="{{ site.github.url }}/about">About</a>
+        <span>© {{ 'now' | date: "%Y" }} {{ site.author }}</span>
+      </div>
+    </footer>
+  </body>
+</html>
