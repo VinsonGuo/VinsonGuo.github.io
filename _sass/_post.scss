@@ -34,7 +34,7 @@
 }
 
 .article-body ul, .article-body ol {
-  margin: 0 0 1.2rem 1.4rem;
+  margin: 0 0 1.2rem 0;
 }
 
 .article-body li {
@@ -88,7 +88,7 @@
 .app-download-section {
   background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
   border-radius: 20px;
-  padding: 30px;
+  padding: 10px;
   margin: 40px 0;
   text-align: center;
   color: $dark-gray-color;
