@@ -42,6 +42,7 @@
   background: #fff;
   border-color: var(--p-border);
   box-shadow: var(--p-shadow-sm);
+  text-decoration: none;
 }
 
 .projects-card-top {
