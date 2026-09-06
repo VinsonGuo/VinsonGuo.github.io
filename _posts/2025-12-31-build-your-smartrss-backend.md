@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build Your RSS Backend for SmartRSS: A Beginner's Guide to FreshRSS, Miniflux, RSSHub, and RSS-Bridg"
+title: "Build Your RSS Backend for SmartRSS: A Beginner's Guide to FreshRSS, Miniflux, RSSHub, and RSS-Bridge"
 author: "Vinson Guo"
 categories: [tutorial, self-hosting, rss, docker, smartrss]
 image: assets/img/smartrss/Screenshot_2025-12-24-10-55-32-81_bb53aaa59eb1f897861a3c681a6c04b4.jpg
