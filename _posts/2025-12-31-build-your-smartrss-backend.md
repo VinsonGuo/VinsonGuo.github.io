@@ -1,61 +1,62 @@
 ---
 layout: post
-title: "Build Your RSS Backend for SmartRSS: A Beginner's Guide to FreshRSS, Miniflux, and RSSHub"
+title: "Build Your RSS Backend for SmartRSS: A Beginner's Guide to FreshRSS, Miniflux, RSSHub, and RSS-Bridg"
 author: "Vinson Guo"
 categories: [tutorial, self-hosting, rss, docker, smartrss]
 image: assets/img/smartrss/Screenshot_2025-12-24-10-55-32-81_bb53aaa59eb1f897861a3c681a6c04b4.jpg
 ---
 
-Want to supercharge your **SmartRSS** experience with a powerful, self-hosted backend? This guide will show you how to set up **FreshRSS**, **Miniflux**, and **RSSHub** - even if you've never touched a server before! These services will sync seamlessly with SmartRSS, giving you complete control over your RSS reading experience.
+This guide walks you through setting up a self-hosted RSS backend with **FreshRSS**, **Miniflux**, **RSSHub**, and **RSS-Bridge**, even if you've never touched a server before. They all work with SmartRSS, so your feeds stay under your control.
 
-## Why Build Your Own RSS Backend?
+## Why build your own RSS backend?
 
-Setting up your own RSS server gives you amazing benefits:
+You get:
 
-- **Perfect SmartRSS Integration**: Sync your feeds across all devices
-- **Complete Privacy**: Your reading habits stay on your own server
-- **No Monthly Fees**: Pay once for a VPS, run forever
-- **Unlimited Feeds**: No restrictions on the number of subscriptions
-- **Super Fast**: Your own dedicated RSS infrastructure
+- Your feeds sync across all your devices through SmartRSS
+- Your reading habits stay on your own server
+- No monthly fees beyond the VPS
+- No limit on the number of subscriptions
+- It's fast, since it runs on your own infrastructure
 
-## What You'll Need
+## What you'll need
 
 - A VPS (Virtual Private Server) - $5-10/month
 - About 30 minutes of your time
 - No coding experience required!
 
-## Quick Start: Try Official Instances First
+## Quick start: try official instances first
 
 Before setting up your own server, you can try these official demo instances:
 
-### Official FreshRSS Demo
-- **URL**: `https://demo.freshrss.org/`
-- **Features**: Clean interface, mobile-friendly, great API support
-- **Perfect for**: Beginners who want a traditional RSS experience
+### Official FreshRSS demo
 
-### Official Miniflux Demo  
-- **URL**: `https://miniflux.app/` (offers free trial)
-- **Features**: Modern design, excellent keyboard shortcuts, powerful API
-- **Perfect for**: Power users who want speed and efficiency
+`https://demo.freshrss.org/`
 
-These demos let you test both services before deciding which one to self-host. Both work perfectly with SmartRSS!
+Clean interface, mobile-friendly, good API support. Good for beginners who want a traditional RSS experience.
 
-## Step 1: Get Your VPS Ready
+### Official Miniflux demo
+`https://miniflux.app/` (offers a free trial)
 
-### Choosing and Purchasing a VPS
+Modern design, excellent keyboard shortcuts, and a powerful API. Good for power users who want speed and efficiency.
 
-For RSS hosting, you don't need anything powerful. Here's what I recommend:
+Both demos let you test the services before deciding which one to self-host. Both work with SmartRSS.
 
-- **Minimum specs**: 1GB RAM, 1 CPU core, 20GB storage
-- **Perfect choice**: 2GB RAM, 1 CPU core, 40GB storage
-- **Cost**: $5-10/month
+## Step 1: Get your VPS ready
 
-**Easy VPS providers for beginners:**
-- **DigitalOcean** - Most beginner-friendly, great tutorials
-- **Linode** - Excellent performance, good support  
-- **Vultr** - Simple interface, reliable service
+### Choosing and purchasing a VPS
 
-### Deploy Your Server (Super Simple!)
+RSS hosting doesn't need much. What I recommend:
+
+- Minimum: 1GB RAM, 1 CPU core, 20GB storage
+- Comfortable: 2GB RAM, 1 CPU core, 40GB storage
+- Cost: $5-10/month
+
+Easy providers for beginners:
+- DigitalOcean: most beginner-friendly, good tutorials
+- Linode: excellent performance, good support
+- Vultr: simple interface, reliable service
+
+### Deploy your server
 
 1. Create an account at your chosen provider
 2. Click "Create Droplet/Server"
@@ -64,7 +65,7 @@ For RSS hosting, you don't need anything powerful. Here's what I recommend:
 5. Click "Create" and wait 2-3 minutes
 6. You'll get an email with your server IP and password!
 
-## Step 2: Connect to Your Server
+## Step 2: Connect to your server
 
 Open your terminal (or PowerShell on Windows) and connect:
 
@@ -72,11 +73,11 @@ Open your terminal (or PowerShell on Windows) and connect:
 ssh root@your_server_ip
 ```
 
-**First time?** You'll see a message asking "Are you sure you want to continue connecting?" Type `yes` and press Enter.
+The first time, you'll be asked "Are you sure you want to continue connecting?" Type `yes` and press Enter.
 
-**Password?** Paste the password from your VPS provider's email (you won't see it appear on screen - that's normal!).
+Then paste the password from your VPS provider's email. It won't show on screen as you type, that's normal.
 
-## Step 3: Install Docker (One Command!)
+## Step 3: Install Docker
 
 Just copy and paste this single command:
 
@@ -84,95 +85,90 @@ Just copy and paste this single command:
 curl -fsSL https://get.docker.com | sh
 ```
 
-This will automatically install Docker and everything you need. Grab a coffee - it takes 2-3 minutes!
+This installs Docker and everything it needs. Grab a coffee, it takes 2-3 minutes.
 
-### Test Docker Installation
+### Test the installation
 
 ```bash
 docker run hello-world
 ```
 
-If you see "Hello from Docker!" - you're ready to go! 
+If you see "Hello from Docker!", you're ready.
 
-## Step 4: Choose Your RSS Services
+## Step 4: Choose your RSS services
 
-Before setting up, let's understand your options. We have a **2+1 architecture**:
+You'll pick one main reader. RSSHub and RSS-Bridge are optional extras for generating feeds from sites that don't have their own:
 
-### The Main RSS Reader (Choose One)
+### The main RSS reader (pick one)
 
-You need **one** main RSS reader to manage your feeds:
+You need one main RSS reader to manage your feeds:
 
-#### FreshRSS - The Beginner-Friendly Choice 
+#### FreshRSS: the beginner-friendly choice
 
-**Perfect for:**
-- First-time self-hosters
-- Users who want a traditional, familiar interface
-- Those who prefer simplicity over advanced features
+FreshRSS suits first-time self-hosters, or anyone who wants a traditional, familiar interface and simplicity over advanced features.
 
-**Why Choose FreshRSS:**
 - Clean, intuitive web interface
 - Easy mobile app integration
-- Great API support for SmartRSS
+- Good API support for SmartRSS
 - Simple setup and maintenance
 - Large community and documentation
 
-**Resource Usage:** Light (~100MB RAM)
+It uses about 100MB of RAM.
 
-#### Miniflux - The Power User's Choice 
+#### Miniflux: the power user's choice
 
-**Perfect for:**
-- Experienced users who want maximum speed
-- Keyboard shortcut enthusiasts
-- Users who prefer minimal, distraction-free reading
-- Those who want the most modern tech stack
+Miniflux suits experienced users who want maximum speed, keyboard shortcuts, minimal distraction-free reading, and a modern tech stack.
 
-**Why Choose Miniflux:**
-- Blazing fast performance
+- Very fast
 - Excellent keyboard navigation
 - Powerful filtering and search
 - Modern, responsive design
 - Built-in feed fetching optimization
 
-**Resource Usage:** Light (~150MB RAM including PostgreSQL)
+It uses about 150MB of RAM including PostgreSQL.
 
-**Can't Decide?** Start with **FreshRSS** - it's easier for beginners, and you can always switch later!
+Can't decide? Start with FreshRSS. It's easier for beginners, and you can switch later.
 
-### Optional: RSSHub - The RSS Supercharger 
+### Optional: RSSHub
 
-**What is RSSHub?**
+Many modern websites (YouTube, Twitter, Instagram, Telegram, etc.) don't provide RSS feeds anymore. RSSHub generates feeds for them.
 
-RSSHub is a game-changer for RSS users. Many modern websites (YouTube, Twitter, Instagram, Telegram, etc.) don't provide RSS feeds anymore. RSSHub solves this by generating RSS feeds from virtually any website!
+Why you might want it:
 
-**Why You Might Want RSSHub:**
+1. Feeds from 400+ platforms
+2. Social media feeds: YouTube channels, Twitter users, Instagram posts
+3. Custom feeds from specific websites, filters, or keywords
+4. Control over feed content, update frequency, and format
+5. Free and open, no API keys needed
 
-1. **No RSS? No Problem!** - Generate feeds from 400+ platforms
-2. **Social Media Feeds** - YouTube channels, Twitter users, Instagram posts
-3. **Custom Content** - Create feeds from specific websites, filters, or keywords
-4. **Flexible & Powerful** - Customize feed content, update frequency, and format
-5. **Free & Open** - No API keys needed, community-driven
-
-**Examples of what RSSHub can do:**
+Some examples:
 - Get RSS feeds from your favorite YouTube channels
 - Follow Twitter users without using Twitter
 - Track Instagram posts from specific accounts
 - Monitor Telegram channels
 - Create feeds from websites that don't have RSS
-- And hundreds more use cases!
+- And hundreds more
 
-**Resource Usage:** Moderate (~200MB RAM with Redis)
+It uses about 200MB of RAM with Redis.
 
-**Recommendation:** Start without RSSHub. Add it later if you need feeds from social media or non-RSS websites.
+My recommendation: start without RSSHub. Add it later if you need feeds from social media or non-RSS sites.
 
-## Step 5: Set Up Your Chosen Service
+### Optional: RSS-Bridge
 
-### Create Project Directory
+RSS-Bridge does the same job as RSSHub: it generates RSS and Atom feeds for websites that don't provide their own. It runs as a single PHP container, no database or cache needed. You control which bridges are enabled with a whitelist file.
+
+My recommendation: same as RSSHub. Install it only if you need feeds from sites without RSS.
+
+## Step 5: Set up your service
+
+### Create the project directory
 
 ```bash
 mkdir -p ~/rss-services
 cd ~/rss-services
 ```
 
-### Option A: FreshRSS Setup (Recommended for Beginners)
+### Option A: FreshRSS (recommended for beginners)
 
 ```bash
 mkdir freshrss && cd freshrss
@@ -197,12 +193,9 @@ services:
       - TZ=Asia/Shanghai
 ```
 
-**Configuration:**
-- `TZ=Asia/Shanghai` → Change to your timezone
+Change `TZ` to your timezone. Save and exit with `Ctrl+X`, then `Y`, then `Enter`.
 
-**Save and exit**: Press `Ctrl+X`, then `Y`, then `Enter`
-
-### Option B: Miniflux Setup (For Power Users)
+### Option B: Miniflux (for power users)
 
 ```bash
 cd ~/rss-services
@@ -255,17 +248,17 @@ volumes:
   miniflux-db:
 ```
 
-**Configuration:**
-- `ADMIN_USERNAME=admin` → Your desired username
-- `ADMIN_PASSWORD=changeme` → Choose a strong password
-- `BASE_URL=http://your_server_ip:8081` → Replace with your server IP
-- `TZ=Asia/Shanghai` → Change to your timezone
+Change these to your own values:
+- `ADMIN_USERNAME`: your username
+- `ADMIN_PASSWORD`: a strong password
+- `BASE_URL`: your server IP
+- `TZ`: your timezone
 
-**Save and exit**: Press `Ctrl+X`, then `Y`, then `Enter`
+Save and exit with `Ctrl+X`, then `Y`, then `Enter`.
 
-### Option C: Add RSSHub (Optional)
+### Option C: RSSHub (optional)
 
-**Only install RSSHub if you need feeds from social media or non-RSS websites.**
+Only install RSSHub if you need feeds from social media or non-RSS sites.
 
 ```bash
 cd ~/rss-services
@@ -304,9 +297,47 @@ volumes:
   rsshub-redis-data:
 ```
 
-**Save and exit**: Press `Ctrl+X`, then `Y`, then `Enter`
+Save and exit with `Ctrl+X`, then `Y`, then `Enter`.
 
-## Step 6: Launch Your Services
+### Option D: RSS-Bridge (optional)
+
+RSS-Bridge turns websites without RSS into feeds, same idea as RSSHub. Install it only if you need that.
+
+```bash
+cd ~/rss-services
+mkdir rss-bridge && cd rss-bridge
+nano docker-compose.yml
+```
+
+Copy and paste this configuration:
+
+```yaml
+services:
+  rss-bridge:
+    image: rssbridge/rss-bridge:latest
+    container_name: rss-bridge
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    volumes:
+      - ./whitelist.txt:/app/whitelist.txt:ro
+    environment:
+      - RSSBRIDGE_whitelist_file=/app/whitelist.txt
+```
+
+Save and exit with `Ctrl+X`, then `Y`, then `Enter`.
+
+Next, create the whitelist file. It decides which bridges are enabled. `*` enables all of them:
+
+```bash
+echo '*' > whitelist.txt
+cat whitelist.txt
+# *
+```
+
+If you want to limit the bridges, put bridge names in this file instead, one per line.
+
+## Step 6: Launch your services
 
 Navigate to your chosen service directory and start it:
 
@@ -331,9 +362,16 @@ cd ~/rss-services/rsshub
 docker compose up -d
 ```
 
+### For RSS-Bridge (if installed):
+
+```bash
+cd ~/rss-services/rss-bridge
+docker compose up -d
+```
+
 This will download and start your services. Wait 2-3 minutes for everything to initialize.
 
-### Check if Everything is Running
+### Check if everything is running
 
 ```bash
 # For FreshRSS
@@ -344,90 +382,110 @@ cd ~/rss-services/miniflux && docker compose ps
 
 # For RSSHub
 cd ~/rss-services/rsshub && docker compose ps
+
+# For RSS-Bridge
+cd ~/rss-services/rss-bridge && docker compose ps
 ```
 
-You should see services marked as "Up" - that means they're working!
+If a service shows "Up", it's working.
 
-## Step 7: Access and Configure Your Services
+## Step 7: Access and configure your services
 
-### FreshRSS Setup
-- **URL**: `http://your_server_ip:8080`
-- **First time**: Click "Installation" and create your admin account
-- **Perfect for**: Beginners who want a simple, clean interface
+### FreshRSS setup
+- URL: `http://your_server_ip:8080`
+- First time: click "Installation" and create your admin account
+- Good for: beginners who want a simple, clean interface
 
-### Miniflux Setup
-- **URL**: `http://your_server_ip:8081`
-- **Login**: Use the username/password you set in the config file
-- **Perfect for**: Users who want speed and powerful features
+### Miniflux setup
+- URL: `http://your_server_ip:8081`
+- Login: use the username and password you set in the config file
+- Good for: users who want speed and powerful features
 
-### RSSHub (No Setup Needed!)
-- **URL**: `http://your_server_ip:1200`
-- **No login required** - it just works!
-- **Use it to**: Generate RSS feeds from YouTube, Twitter, Instagram, etc.
-- **Documentation**: Visit the URL to see all available routes and examples
+### RSSHub (no setup needed)
+- URL: `http://your_server_ip:1200`
+- No login required, it just works
+- Use it to generate RSS feeds from YouTube, Twitter, Instagram, etc.
+- Documentation: open the URL to see all available routes and examples
 
-## Step 8: Enable API Access for SmartRSS
+### RSS-Bridge (no setup needed)
+- URL: `http://your_server_ip:3000`
+- No login required
+- Use it to generate feeds for sites without RSS
+- Open the URL to browse the available bridges
 
-Now the exciting part - connecting your RSS services to SmartRSS!
+## Step 8: Enable API access for SmartRSS
+
+Now connect your RSS services to SmartRSS.
 
 ### Enable FreshRSS API
 
-1. **Login to FreshRSS** at `http://your_server_ip:8080`
-2. **Click on your username** (top right) → **Administration**
-3. **Go to "Authentication"** → Enable **"Enable API access"**
-4. **Save changes**
-5. **Generate API credentials**:
-   - Still in Administration, go to **"Profile"**
-   - Scroll to **"API"** section
-   - Click **"Generate"** to create your API password
-   - **Copy your API username and password** - you'll need these for SmartRSS!
+1. Log in to FreshRSS at `http://your_server_ip:8080`.
+2. Click your username (top right), then Administration.
+3. Go to Authentication and enable API access.
+4. Save the changes.
+5. Generate API credentials:
+   - Still in Administration, open Profile
+   - Scroll to the API section
+   - Click Generate to create your API password
+   - Copy your API username and password. SmartRSS will need them.
 
 ### Enable Miniflux API
 
-Great news! **Miniflux API is enabled by default** - no setup needed!
+1. Log in to Miniflux at `http://your_server_ip:8081`.
+2. Open Settings, then Integrations.
+3. Enable the Google Reader API and set a username and password. These are separate from your Miniflux account login.
+4. Server URL: `http://your_server_ip:8081/`
 
-## Step 9: Connect SmartRSS to Your Server
 
-Now you can connect SmartRSS to your self-hosted services!
+## Step 9: Connect SmartRSS to your server
 
-### For FreshRSS Users:
+Now connect SmartRSS to your self-hosted services.
 
-1. **Open SmartRSS** on your device
-2. **Add a new account** → Select **"FreshRSS"**
-3. **Enter your server details**:
-   - **Server URL**: `http://your_server_ip:8080/api/`
-   - **Username**: Your FreshRSS username
-   - **Password**: Your API password (from Step 7)
-4. **Test connection** and enjoy your synced feeds!
+### For FreshRSS users:
 
-### For Miniflux Users:
+1. Open SmartRSS on your device.
+2. Add a new account and select FreshRSS.
+3. Enter your server details:
+   - Server URL: `http://your_server_ip:8080/api/`
+   - Username: your FreshRSS username
+   - Password: your API password (from step 8)
+4. Test the connection. Your feeds now sync.
 
-1. **Open SmartRSS** on your device  
-2. **Add a new account** → Select **"Miniflux"**
-3. **Enter your server details**:
-   - **Server URL**: `http://your_server_ip:8081/`
-   - **Username**: Your Miniflux username
-   - **Password**: Your Miniflux password
-4. **Test connection** and you're ready to go!
+### For Miniflux users:
 
-### Add Feeds from RSSHub
+1. Open SmartRSS on your device.
+2. Add a new account and select Miniflux.
+3. Enter your server details:
+   - Server URL: `http://your_server_ip:8081/`
+   - Username: your Miniflux Google Reader username
+   - Password: your Miniflux Google Reader password
+4. Test the connection, and you're done.
+
+### Add feeds from RSSHub
 
 Want to follow a YouTube channel or Twitter user that doesn't have RSS?
 
-1. **Browse RSSHub** at `http://your_server_ip:1200`
-2. **Find the route you need** (e.g., `/youtube/user/:username`)
-3. **Copy the RSS feed URL**
-4. **Add it directly in SmartRSS** or your FreshRSS/Miniflux web interface!
+1. Open RSSHub at `http://your_server_ip:1200`.
+2. Find the route you need, for example `/youtube/user/:username`.
+3. Copy the RSS feed URL.
+4. Add it in SmartRSS, or in your FreshRSS or Miniflux web interface.
 
-**Popular RSSHub routes:**
-- **YouTube**: `http://your_server_ip:1200/youtube/user/:username`
-- **Twitter**: `http://your_server_ip:1200/twitter/user/:username`  
-- **Instagram**: `http://your_server_ip:1200/instagram/user/:username`
-- **Telegram**: `http://your_server_ip:1200/telegram/channel/:channelname`
+Popular RSSHub routes:
+- YouTube: `http://your_server_ip:1200/youtube/user/:username`
+- Twitter: `http://your_server_ip:1200/twitter/user/:username`
+- Instagram: `http://your_server_ip:1200/instagram/user/:username`
+- Telegram: `http://your_server_ip:1200/telegram/channel/:channelname`
 
-## Quick Management Commands
+### Add feeds from RSS-Bridge
 
-### Check Service Status
+1. Open RSS-Bridge at `http://your_server_ip:3000`.
+2. Pick a bridge from the list and fill in the fields it asks for.
+3. Copy the RSS or Atom URL it generates.
+4. Add that URL in SmartRSS, or in your FreshRSS or Miniflux web interface.
+
+## Quick management commands
+
+### Check service status
 
 ```bash
 # For FreshRSS
@@ -438,9 +496,12 @@ cd ~/rss-services/miniflux && docker compose ps
 
 # For RSSHub
 cd ~/rss-services/rsshub && docker compose ps
+
+# For RSS-Bridge
+cd ~/rss-services/rss-bridge && docker compose ps
 ```
 
-### View Logs (if something goes wrong)
+### View logs (if something goes wrong)
 
 ```bash
 # For FreshRSS
@@ -451,9 +512,12 @@ cd ~/rss-services/miniflux && docker compose logs -f
 
 # For RSSHub
 cd ~/rss-services/rsshub && docker compose logs -f
+
+# For RSS-Bridge
+cd ~/rss-services/rss-bridge && docker compose logs -f
 ```
 
-### Restart a Service
+### Restart a service
 
 ```bash
 # For FreshRSS
@@ -464,9 +528,12 @@ cd ~/rss-services/miniflux && docker compose restart
 
 # For RSSHub
 cd ~/rss-services/rsshub && docker compose restart
+
+# For RSS-Bridge
+cd ~/rss-services/rss-bridge && docker compose restart
 ```
 
-### Update Your Services
+### Update your services
 
 ```bash
 # For FreshRSS
@@ -477,9 +544,12 @@ cd ~/rss-services/miniflux && docker compose pull && docker compose up -d
 
 # For RSSHub
 cd ~/rss-services/rsshub && docker compose pull && docker compose up -d
+
+# For RSS-Bridge
+cd ~/rss-services/rss-bridge && docker compose pull && docker compose up -d
 ```
 
-### Stop Services
+### Stop services
 
 ```bash
 # For FreshRSS
@@ -490,50 +560,55 @@ cd ~/rss-services/miniflux && docker compose down
 
 # For RSSHub
 cd ~/rss-services/rsshub && docker compose down
+
+# For RSS-Bridge
+cd ~/rss-services/rss-bridge && docker compose down
 ```
 
-## Common Issues and Fixes
+## Common issues and fixes
 
-### Services Won't Start
+### Services won't start
 
 ```bash
 # Check what's wrong (replace with your service)
-cd ~/rss-services/freshrss  # or miniflux or rsshub
+cd ~/rss-services/freshrss  # or miniflux, rsshub, or rss-bridge
 docker compose logs
 
 # Restart everything
 docker compose restart
 ```
 
-### Can't Access Your Server
+### Can't access your server
 
 Make sure your VPS provider's firewall allows these ports (only for services you installed):
-- **8080** (FreshRSS)
-- **8081** (Miniflux)
-- **1200** (RSSHub)
+- 8080 (FreshRSS)
+- 8081 (Miniflux)
+- 1200 (RSSHub)
+- 3000 (RSS-Bridge)
 
-### SmartRSS Won't Connect
+### SmartRSS won't connect
 
-1. **Double-check your server URL** - include `http://` and the port number
-2. **Verify your API credentials** - re-generate them if needed
-3. **Test the web interface** - make sure you can login in your browser first
+1. Double-check your server URL, including `http://` and the port number.
+2. Verify your API credentials. Regenerate them if needed.
+3. Test the web interface in your browser first. If you can log in there, the server itself is fine.
 
 ## Conclusion
 
-You've just built your own RSS backend that works perfectly with SmartRSS! Your feeds will sync across all your devices, you have complete privacy, and you're saving money on monthly subscription fees.
+You now have your own RSS backend that syncs with SmartRSS across all your devices. Your reading stays on your own server, and there are no monthly fees.
 
-Start adding your favorite feeds and enjoy the ultimate RSS experience! 
+Start adding your favorite feeds.
 
-**Need help?** Check out the official documentation:
+Need help? Check the official documentation:
 - [FreshRSS Documentation](https://freshrss.github.io/FreshRSS/)
-- [Miniflux Documentation](https://miniflux.app/docs/)  
+- [Miniflux Documentation](https://miniflux.app/docs/)
 - [RSSHub Documentation](https://docs.rsshub.app/)
+- [RSS-Bridge Documentation](https://rss-bridge.github.io/rss-bridge/index.html)
 
-Happy reading! 
+Happy reading!
 
 ---
 
-*Ready to supercharge your RSS experience? Download today and start using these powerful AI prompts!*
+*Download SmartRSS and connect it to your new backend.*
 
 <div class="app-download-section">
   <h3>📱 Download SmartRSS Now</h3>
