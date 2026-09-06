@@ -7,7 +7,7 @@ sticky: true
 image: assets/img/smartrss/smartrss-logo.PNG
 ---
 
-Keeping up with your favorite blogs, news sites, and creators gets messy fast. I built **SmartRSS**, an AI-powered RSS reader for discovering, organizing, and reading content on all your devices.
+**SmartRSS** takes RSS reading beyond the ordinary. Bring all your favorite content into one place, from RSS feeds and blogs to podcasts, YouTube, Reddit, Substack, Mastodon, Bluesky, and more. Discover 80,000+ built-in sources and use AI to summarize, translate, and understand articles faster, while text-to-speech turns your reading list into high-quality audio. With powerful customization, offline reading, and seamless sync across popular RSS services, SmartRSS adapts to the way you read.
 
 <div class="app-download-section">
   <h3>📱 Download SmartRSS Now</h3>
@@ -34,7 +34,7 @@ Keeping up with your favorite blogs, news sites, and creators gets messy fast. I
 
 ## What makes SmartRSS special?
 
-SmartRSS is an RSS reader that works the same way everywhere. Open the same feeds from any device, Android, iOS, macOS, or Windows, in one interface.
+SmartRSS is an RSS reader that works the same way everywhere. Open the same feeds from any device, **Android, iOS, macOS, or Windows**, in one interface.
 
 ### AI features that work for you
 
@@ -141,4 +141,4 @@ style="max-width: 200px; height: auto; margin: 20px; border-radius: 10px; box-sh
 
 ---
 
-*SmartRSS is available now on the [App Store](https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900) and [Google Play](https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader). Have feedback or questions? Feel free to [reach out]({{ site.github.url }}/contact). I'd love to hear from you!*
+*SmartRSS is available now on the [App Store](https://apps.apple.com/app/smartrss-ai-rss-reader/id6749771900) and [Google Play](https://play.google.com/store/apps/details?id=com.vinsonguo.flutter_rss_reader). Have feedback or questions? Feel free to [reach out]({{ site.github.url }}/about). I'd love to hear from you!*
