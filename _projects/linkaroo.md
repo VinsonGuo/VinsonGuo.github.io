@@ -48,8 +48,6 @@ showcase_screenshots:
   - /assets/img/linkaroo/IMG_9060.PNG
   - /assets/img/linkaroo/IMG_9058.PNG
   - /assets/img/linkaroo/IMG_9059.PNG
-  - /assets/img/linkaroo/IMG_9057.PNG
-  - /assets/img/linkaroo/IMG_9056.PNG
 ---
 
 ## Your library. Your server.
