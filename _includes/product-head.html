@@ -11,9 +11,14 @@
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/product.css">
   <style>:root{--p-accent:{% if page.accent %}{{ page.accent }}{% else %}#0071e3{% endif %}}</style>
   {% feed_meta %}
+  {% if page.logo %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.github.url }}{{ page.logo }}">
+  <link rel="icon" type="image/png" href="{{ site.github.url }}{{ page.logo }}">
+  {% else %}
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  {% endif %}
   <link rel="manifest" href="/site.webmanifest">
   {% include google-analytics.html %}
   {% seo %}
