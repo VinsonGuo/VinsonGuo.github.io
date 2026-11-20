@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/product.css">
-  <style>:root{--p-accent:{% if page.accent %}{{ page.accent }}{% else %}#0071e3{% endif %}}</style>
+  <style>:root{--p-accent:{% if page.accent %}{{ page.accent }}{% else %}#0071e3{% endif %};--p-accent-text:{% if page.accent_text %}{{ page.accent_text }}{% elsif page.accent %}{{ page.accent }}{% else %}#0071e3{% endif %};--p-accent-contrast:{% if page.accent_contrast %}{{ page.accent_contrast }}{% else %}#ffffff{% endif %}}</style>
   {% feed_meta %}
   {% if page.logo %}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.github.url }}{{ page.logo }}">

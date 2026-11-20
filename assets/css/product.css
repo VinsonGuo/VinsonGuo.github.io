@@ -85,7 +85,7 @@
 
 .projects-card:hover .projects-card-arrow {
   transform: translateX(4px);
-  color: var(--p-accent);
+  color: var(--p-accent-text);
 }
 
 .projects-card-chips {
@@ -121,6 +121,8 @@
   --p-text-2: #6e6e73;
   --p-border: #e8e8ed;
   --p-accent: #0071e3;
+  --p-accent-text: #0071e3;
+  --p-accent-contrast: #ffffff;
   --p-radius-lg: 20px;
   --p-radius-md: 14px;
   --p-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
@@ -243,7 +245,7 @@ a {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--p-accent);
+  color: var(--p-accent-text);
   margin-bottom: 16px;
 }
 
@@ -279,7 +281,7 @@ a {
   padding: 13px 26px;
   border-radius: 980px;
   background: var(--p-accent);
-  color: #fff;
+  color: var(--p-accent-contrast);
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -391,7 +393,7 @@ a {
   height: 48px;
   border-radius: 14px;
   background: #fff;
-  color: var(--p-accent);
+  color: var(--p-accent-text);
   margin-bottom: 20px;
   box-shadow: var(--p-shadow-sm);
 }

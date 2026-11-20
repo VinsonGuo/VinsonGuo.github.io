@@ -5,7 +5,9 @@ order: 4
 tagline: "Learn Chinese characters the way they are actually written."
 description: "HSK Chinese Stroke Flashcards teaches all 1,550 HSK 3.0 single characters with stroke-by-stroke animations, SM-2 spaced repetition, pinyin, audio and offline translations in 11 languages. Available on iOS and Android."
 logo: /assets/img/hanzi/hanzi_icon.png
-accent: "#c0392b"
+accent: "#fbb802"
+accent_text: "#b57d00"
+accent_contrast: "#1d1d1f"
 platforms:
   - iOS
   - Android
