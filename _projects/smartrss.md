@@ -10,6 +10,8 @@ integrations_label: "Syncs with"
 features_title: "Built to make reading effortless"
 final_title: "Start reading smarter"
 final_text: "Free on iOS, Android, macOS, Windows, and Linux."
+youtube_id: lzmfereY1Ss
+video_title: "See SmartRSS in action"
 platforms:
   - iOS
   - Android

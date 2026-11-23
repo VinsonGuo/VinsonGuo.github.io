@@ -19,6 +19,8 @@ downloads:
 features_title: "File transfer, simplified"
 final_title: "Transfer files in seconds"
 final_text: "Free on iOS and Android."
+youtube_id: X-LFiUP487g
+video_title: "See QRDrop in action"
 showcase_screenshots:
   - /assets/img/qrdrop/01.png
   - /assets/img/qrdrop/02.png

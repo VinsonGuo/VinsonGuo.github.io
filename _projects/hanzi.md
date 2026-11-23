@@ -21,6 +21,8 @@ downloads:
 features_title: "Hanzi learning, done right"
 final_title: "Start writing characters today"
 final_text: "Free on iOS and Android."
+youtube_id: mrh8Jc7Qweg
+video_title: "See the stroke animations in action"
 showcase_screenshots:
   - /assets/img/hanzi/01.jpg
   - /assets/img/hanzi/02.jpg

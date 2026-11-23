@@ -45,6 +45,22 @@
       </section>
       {% endif %}
 
+      {% if page.youtube_id %}
+      <section class="product-section product-video">
+        <div class="product-section-inner">
+          <div class="product-video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
+              title="{% if page.video_title %}{{ page.video_title }}{% else %}{{ page.title }} video{% endif %}"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
       {% if page.integrations %}
       <section class="product-integrations">
         <div class="product-integrations-inner">

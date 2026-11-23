@@ -19,6 +19,8 @@ downloads:
 features_title: "Pixel art that's actually pixel art"
 final_title: "Turn photos into retro pixel art"
 final_text: "Free on iOS and Android."
+youtube_id: 7vQfBuJEM-g
+video_title: "See Pixel You in action"
 showcase_screenshots:
   - /assets/img/pixelyou/01.png
   - /assets/img/pixelyou/02.png
