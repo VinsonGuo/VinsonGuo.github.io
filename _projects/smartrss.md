@@ -5,6 +5,7 @@ order: 1
 tagline: "Read. Listen. Never miss a story again."
 description: "SmartRSS is an AI-powered RSS reader for iOS, Android, macOS, Windows and Linux. One unified feed hub with AI summaries, AI aggregation, podcasts, and universal sync."
 logo: /assets/img/smartrss/smartrss-logo.PNG
+image: /assets/img/smartrss/og.png
 accent: "#0071e3"
 integrations_label: "Syncs with"
 features_title: "Built to make reading effortless"

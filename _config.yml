@@ -26,9 +26,13 @@ collections:
     permalink: /projects/:slug/
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+url:                 'https://vinsonguo.github.io'
 title:		           'Vinson Guo'
 description:	       'Mobile Developer | Android/iOS/Flutter/React Native'
 author:              'Vinson Guo'
+
+exclude:
+  - scripts
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:

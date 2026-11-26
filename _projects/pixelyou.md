@@ -5,6 +5,7 @@ order: 5
 tagline: "Turn photos into real low-resolution sprites, not a filter on top."
 description: "Pixel You converts a photo into an actual pixel grid locked to a retro palette — NES, Game Boy, Commodore 64, ZX Spectrum, PICO-8 and more — with real dithering and no uploads. Available on iOS and Android."
 logo: /assets/img/pixelyou/pixelyou_icon.png
+image: /assets/img/pixelyou/og.png
 accent: "#111111"
 platforms:
   - iOS

@@ -5,6 +5,7 @@ order: 2
 tagline: "Your wallabag library, with the reading experience it deserves."
 description: "Linkaroo is a native wallabag client for iOS, Android and macOS. Offline reading, annotations, text-to-speech, translations and AI actions with your own API key."
 logo: /assets/img/linkaroo/linkaroo_icon.png
+image: /assets/img/linkaroo/og.png
 accent: "#845400"
 integrations_label: "Works with"
 features_title: "Read later, done right"
