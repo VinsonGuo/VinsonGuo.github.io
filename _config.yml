@@ -27,9 +27,29 @@ collections:
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 url:                 'https://vinsonguo.github.io'
-title:		           'Vinson Guo'
-description:	       'Mobile Developer | Android/iOS/Flutter/React Native'
+title:               'Vinson Guo'
+tagline:             'Indie Mobile Developer'
+description:         "Hi, I'm Vinson Guo, an indie developer dedicated to building innovative and reliable mobile apps across iOS, Android, macOS, Windows, and Linux."
 author:              'Vinson Guo'
+logo:                /assets/img/avatar.png
+
+twitter:
+  username:          vinson_guo
+  card:              summary_large_image
+
+social:
+  name:              Vinson Guo
+  links:
+    - https://github.com/VinsonGuo
+    - https://twitter.com/vinson_guo
+    - https://bsky.app/profile/vinsonguo.bsky.social
+    - https://play.google.com/store/apps/dev?id=7269031955117533398
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og-home.png
 
 exclude:
   - scripts

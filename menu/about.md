@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Me
+description: "About Vinson Guo, an independent mobile app developer building cross-platform apps with Android, iOS, Flutter, and React Native."
 permalink: /about
 ---
 

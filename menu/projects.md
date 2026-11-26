@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+description: "Apps designed, built, and shipped by Vinson Guo — SmartRSS, Linkaroo, QRDrop, HSK Chinese Stroke Flashcards, and Pixel You."
 permalink: /projects
 body_class: projects
 ---
