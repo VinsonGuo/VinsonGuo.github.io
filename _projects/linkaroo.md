@@ -1,6 +1,8 @@
 ---
 layout: product
 title: Linkaroo
+seo_title: "Linkaroo — Native wallabag Client for iOS, Android & macOS"
+app_category: "UtilitiesApplication"
 order: 2
 tagline: "Your wallabag library, with the reading experience it deserves."
 description: "Linkaroo is a native wallabag client for iOS, Android and macOS. Offline reading, annotations, text-to-speech, translations and AI actions with your own API key."

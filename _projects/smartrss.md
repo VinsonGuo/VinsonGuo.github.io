@@ -1,6 +1,8 @@
 ---
 layout: product
 title: SmartRSS
+seo_title: "SmartRSS — AI-Powered Cross-Platform RSS Reader"
+app_category: "NewsApplication"
 order: 1
 tagline: "Read. Listen. Never miss a story again."
 description: "SmartRSS is an AI-powered RSS reader for iOS, Android, macOS, Windows and Linux. One unified feed hub with AI summaries, AI aggregation, podcasts, and universal sync."

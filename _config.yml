@@ -50,6 +50,10 @@ defaults:
       path: ""
     values:
       image: /assets/img/og-home.png
+  - scope:
+      path: "googleaee5e933b3c08804.html"
+    values:
+      sitemap: false
 
 exclude:
   - scripts

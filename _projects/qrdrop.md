@@ -1,6 +1,8 @@
 ---
 layout: product
 title: QRDrop
+seo_title: "QRDrop — Fast Local Wi-Fi File Transfer via QR Code"
+app_category: "UtilitiesApplication"
 order: 3
 tagline: "Transfer files between your devices in seconds using only a QR code."
 description: "QRDrop turns your phone, tablet, TV, or computer into a secure local file transfer portal. Scan a QR code and transfer files directly through your web browser, no installation required on the receiving device."

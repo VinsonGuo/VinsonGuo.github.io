@@ -1,6 +1,8 @@
 ---
 layout: product
 title: HSK Chinese Stroke Flashcards
+seo_title: "HSK Chinese Stroke Flashcards — Learn 1,550 HSK 3.0 Characters"
+app_category: "EducationalApplication"
 order: 4
 tagline: "Learn Chinese characters the way they are actually written."
 description: "HSK Chinese Stroke Flashcards teaches all 1,550 HSK 3.0 single characters with stroke-by-stroke animations, SM-2 spaced repetition, pinyin, audio and offline translations in 11 languages. Available on iOS and Android."

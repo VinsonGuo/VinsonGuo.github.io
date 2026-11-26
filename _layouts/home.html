@@ -59,3 +59,22 @@ layout: default
   {% endif %}
 </div>
 {% endif %}
+
+<section class="home-apps">
+  <div class="home-apps-head">
+    <h2>Apps</h2>
+    <a href="{{ site.github.url }}/projects">All projects →</a>
+  </div>
+  <div class="home-apps-grid">
+    {% assign projects = site.projects | sort: "order" %}
+    {% for project in projects %}
+      <a class="home-app-card" href="{{ site.github.url }}{{ project.url }}">
+        <img class="home-app-logo" src="{{ site.github.url }}{{ project.logo }}" alt="{{ project.title }} logo" loading="lazy">
+        <div class="home-app-info">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.tagline }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
